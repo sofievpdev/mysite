@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sofie Panfilova — Preventive Medicine & Longevity</title>
+<meta name="description" content="Персональные программы долголетия и управление здоровьем на основе данных. Sofie Panfilova — эксперт в области превентивной медицины.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --steel: #4E5E66;
+  --milk: #E6E5DD;
+  --pearl: #E0D6C7;
+  --smoke-blue: #3A6E82;
+  --smoke-blue-light: #4E8FA3;
+  --accent: #2E7F94;
+  --accent-glow: rgba(46, 127, 148, 0.25);
+  --warm-gold: #B8943A;
+  --white: #FAFAF8;
+  --dark: #141E24;
+  --text: #2C3E46;
+  --light-bg: #F2F1EC;
+  --gradient-1: linear-gradient(135deg, #3A6E82 0%, #2E7F94 50%, #4E8FA3 100%);
+  --gradient-warm: linear-gradient(135deg, #B8943A 0%, #CDA84E 100%);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--light-bg); }
+::-webkit-scrollbar-thumb { background: var(--smoke-blue); border-radius: 3px; }
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(250, 250, 248, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(74, 122, 140, 0.06);
+  transition: all 0.4s ease;
+}
+
+nav.scrolled {
+  box-shadow: 0 4px 40px rgba(30, 42, 48, 0.08);
+  background: rgba(250, 250, 248, 0.95);
+}
+
+.nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.28em;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--gradient-warm);
+  border-radius: 1px;
+}
+
+.logo span {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  color: var(--smoke-blue);
+  text-transform: uppercase;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  color: var(--steel);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  font-weight: 400;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--gradient-1);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover::after { width: 100%; }
+
+.lang-switch {
+  display: flex;
+  gap: 2px;
+  background: var(--light-bg);
+  border-radius: 24px;
+  padding: 3px;
+  border: 1px solid rgba(74, 122, 140, 0.08);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--steel);
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.lang-btn.active {
+  background: var(--gradient-1);
+  color: white;
+  box-shadow: 0 2px 12px var(--accent-glow);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px;
+}
+
+.burger span {
+  width: 22px;
+  height: 1.5px;
+  background: var(--dark);
+  transition: all 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #f0efea 0%, #dde5e8 25%, #e6e5dd 50%, #e0d6c7 75%, #d5dee2 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 0%; }
+  75% { background-position: 0% 100%; }
+}
+
+/* Decorative floating shapes */
+.hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.08;
+}
+
+.hero-shape-1 {
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  right: -100px;
+  background: var(--smoke-blue);
+  animation: float-1 20s ease-in-out infinite;
+}
+
+.hero-shape-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  left: -80px;
+  background: var(--warm-gold);
+  animation: float-2 15s ease-in-out infinite;
+}
+
+.hero-shape-3 {
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  right: 15%;
+  background: var(--accent);
+  animation: float-3 18s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-30px, 40px) scale(1.05); }
+  66% { transform: translate(20px, -20px) scale(0.95); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(40px, -30px) rotate(10deg); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, 30px); }
+}
+
+/* Grain overlay */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 140px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text { max-width: 580px; }
+
+.hero-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--smoke-blue);
+  margin-bottom: 28px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 40px;
+  height: 1.5px;
+  background: var(--gradient-warm);
+  flex-shrink: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.12;
+  margin-bottom: 28px;
+  font-weight: 300;
+  color: var(--dark);
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+  position: relative;
+}
+
+.hero h1 em::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-warm);
+  border-radius: 1px;
+}
+
+.hero-sub {
+  font-size: 1.08rem;
+  color: var(--steel);
+  margin-bottom: 48px;
+  line-height: 1.85;
+  max-width: 480px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Hero visual — DNA helix-inspired */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-graphic {
+  width: 440px;
+  height: 440px;
+  position: relative;
+}
+
+/* Pulsing concentric circles */
+.pulse-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 122, 140, 0.12);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pulse-ring:nth-child(1) { width: 100%; height: 100%; animation: pulse 4s ease-in-out infinite; }
+.pulse-ring:nth-child(2) { width: 80%; height: 80%; animation: pulse 4s ease-in-out 0.5s infinite; }
+.pulse-ring:nth-child(3) { width: 60%; height: 60%; animation: pulse 4s ease-in-out 1s infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.04); }
+}
+
+.circle-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(74, 122, 140, 0.08), rgba(196, 162, 101, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(74, 122, 140, 0.12);
+}
+
+.circle-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.circle-text-small {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-top: 6px;
+}
+
+/* Floating stat badges around circle */
+.float-badge {
+  position: absolute;
+  padding: 10px 18px;
+  background: rgba(250, 250, 248, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(74, 122, 140, 0.1);
+  border-radius: 30px;
+  font-size: 0.72rem;
+  color: var(--dark);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.float-badge .num {
+  color: var(--accent);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.float-badge-1 { top: 8%; right: 5%; animation: float-badge 6s ease-in-out infinite; }
+.float-badge-2 { bottom: 15%; left: 0; animation: float-badge 6s ease-in-out 1s infinite; }
+.float-badge-3 { bottom: 5%; right: 12%; animation: float-badge 6s ease-in-out 2s infinite; }
+
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Orbiting dots */
+.orbit-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+}
+
+.orbit-dot::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.orbit-dot-1 { animation: orbit 12s linear infinite; }
+.orbit-dot-2 { animation: orbit 12s linear infinite reverse; animation-delay: -3s; }
+
+.orbit-dot-1::after { transform: translate(200px, 0); }
+.orbit-dot-2::after { transform: translate(160px, 0); opacity: 0.5; }
+
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 38px;
+  background: var(--gradient-1);
+  color: white;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 35px rgba(74, 122, 140, 0.3);
+}
+
+.btn-primary:hover::before { opacity: 1; }
+
+.btn-primary svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover svg { transform: translateX(4px); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 32px;
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 2px;
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 2px;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+
+/* ===== SECTIONS ===== */
+section { padding: 110px 0; }
+
+.section-eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--smoke-blue);
+  margin-bottom: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 1.5px;
+  background: var(--gradient-warm);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  margin-bottom: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.section-desc {
+  font-size: 1.02rem;
+  color: var(--steel);
+  max-width: 600px;
+  line-height: 1.85;
+}
+
+/* ===== ABOUT ===== */
+.about { background: var(--white); position: relative; }
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--smoke-blue), transparent);
+  opacity: 0.15;
+}
+
+.about-grid {
+  max-width: 720px;
+}
+
+.about-badges {
+  display: flex;
+  gap: 32px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.badge-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.4s;
+  cursor: default;
+}
+
+.badge-logo:hover {
+  transform: translateY(-3px);
+}
+
+.badge-logo .logo-seal {
+  height: 55px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  object-fit: contain;
+}
+
+.badge-logo:hover .logo-seal {
+  opacity: 1;
+}
+
+.badge-logo .badge-label {
+  font-size: 0.6rem;
+  color: var(--steel);
+  text-align: center;
+  letter-spacing: 0.03em;
+  max-width: 180px;
+  line-height: 1.4;
+  opacity: 0;
+  height: 0;
+}
+
+.about-photo {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  width: 260px;
+  aspect-ratio: 3/4;
+  margin: 0 0 12px 36px;
+  float: right;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(1.08) contrast(0.95) saturate(0.9);
+}
+
+.about-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 1px solid rgba(74, 122, 140, 0.1);
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(250,250,248,0.08) 0%, rgba(250,250,248,0.15) 100%);
+}
+
+.about-text-short {
+  font-size: 1.06rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.about-text-full {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.about-text-full.expanded { max-height: 2000px; }
+
+.about-text-full p { margin-bottom: 16px; }
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  padding: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.read-more-btn:hover { color: var(--smoke-blue); transform: translateX(4px); }
+
+.read-more-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s;
+}
+
+.read-more-btn.expanded svg { transform: rotate(180deg); }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.stat-card {
+  padding: 30px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid rgba(74, 122, 140, 0.08);
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gradient-1);
+  border-radius: 0 2px 2px 0;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(74, 122, 140, 0.08);
+  border-color: rgba(74, 122, 140, 0.15);
+}
+
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--steel);
+  letter-spacing: 0.04em;
+}
+
+/* ===== WAVE DIVIDER ===== */
+.wave-divider {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== SYMPTOMS ===== */
+.symptoms {
+  background: var(--light-bg);
+  position: relative;
+}
+
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.symptom-card {
+  padding: 34px 28px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid rgba(74, 122, 140, 0.06);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.symptom-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-1);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.symptom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(30, 42, 48, 0.08);
+  border-color: rgba(74, 122, 140, 0.15);
+}
+
+.symptom-card:hover::after { transform: scaleX(1); }
+
+.symptom-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--gradient-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.4s;
+}
+
+.symptom-card:hover .symptom-icon { transform: scale(1.08) rotate(-3deg); }
+
+.symptom-icon svg {
+  width: 22px;
+  height: 22px;
+  color: white;
+}
+
+.symptom-card h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.symptom-card p {
+  font-size: 0.85rem;
+  color: var(--steel);
+  line-height: 1.65;
+}
+
+.symptoms-cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  background: var(--white);
+  position: relative;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(74, 122, 140, 0.08);
+  transition: all 0.4s;
+}
+
+.service-card:hover {
+  box-shadow: 0 12px 44px rgba(30, 42, 48, 0.06);
+  border-color: rgba(74, 122, 140, 0.15);
+}
+
+.service-header {
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.service-header:hover { background: rgba(74, 122, 140, 0.02); }
+
+.service-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.service-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+  min-width: 40px;
+}
+
+.service-header h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.service-header-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--gradient-1);
+  color: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+.service-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.service-toggle svg {
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+  transition: transform 0.3s;
+}
+
+.service-card.open .service-toggle {
+  background: var(--gradient-1);
+  border-color: transparent;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.service-card.open .service-toggle svg {
+  color: white;
+  transform: rotate(45deg);
+}
+
+.service-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+.service-card.open .service-body { max-height: 3000px; }
+
+.service-content { padding: 0 40px 40px 100px; }
+
+.service-desc {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 28px;
+  max-width: 720px;
+}
+
+.service-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.service-col h5 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.73rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-col h5::before {
+  content: '';
+  width: 16px;
+  height: 1.5px;
+  background: var(--gradient-warm);
+}
+
+.service-col ul { list-style: none; }
+
+.service-col li {
+  font-size: 0.87rem;
+  color: var(--text);
+  padding: 7px 0 7px 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.service-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gradient-1);
+}
+
+.service-pricing {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.price-tag {
+  padding: 16px 28px;
+  background: var(--light-bg);
+  border-radius: 10px;
+  border: 1px solid rgba(74, 122, 140, 0.06);
+  transition: all 0.3s;
+}
+
+.price-tag:hover { border-color: rgba(74, 122, 140, 0.15); }
+
+.price-tag .label {
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 4px;
+}
+
+.price-tag .price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+
+.price-tag .note {
+  font-size: 0.72rem;
+  color: var(--steel);
+  margin-top: 2px;
+}
+
+.service-stages { margin-bottom: 28px; }
+
+.stage {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(74, 122, 140, 0.06);
+}
+
+.stage:last-child { border-bottom: none; }
+
+.stage-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.stage-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--gradient-1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.stage-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.stage-body {
+  padding-left: 44px;
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.stage-body ul { list-style: none; margin-top: 6px; }
+
+.stage-body li {
+  padding: 3px 0 3px 18px;
+  position: relative;
+}
+
+.stage-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gradient-1);
+}
+
+/* ===== TELEGRAM BANNER ===== */
+.tg-banner {
+  text-align: center;
+  padding: 60px 0;
+  background: var(--light-bg);
+  position: relative;
+}
+
+.tg-banner-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 40px;
+  background: var(--white);
+  border-radius: 50px;
+  border: 1px solid rgba(74, 122, 140, 0.1);
+  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.tg-banner-inner:hover {
+  border-color: rgba(74, 122, 140, 0.25);
+  box-shadow: 0 8px 32px rgba(74, 122, 140, 0.08);
+  transform: translateY(-2px);
+}
+
+.tg-banner-inner svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.tg-banner a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: color 0.3s;
+}
+
+.tg-banner a:hover { color: var(--smoke-blue); }
+
+/* ===== FAQ ===== */
+.faq { padding: 100px 0; background: var(--white); }
+
+.faq-list { }
+
+.faq-item {
+  border-bottom: 1px solid rgba(74, 122, 140, 0.1);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.faq-question h4 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--dark);
+  transition: color 0.3s;
+  line-height: 1.5;
+}
+
+.faq-question:hover h4 { color: var(--smoke-blue); }
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 122, 140, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  color: var(--smoke-blue);
+}
+
+.faq-icon svg { width: 14px; height: 14px; transition: transform 0.4s; }
+
+.faq-item.open .faq-icon {
+  background: var(--gradient-1);
+  border-color: transparent;
+  color: white;
+}
+
+.faq-item.open .faq-icon svg { transform: rotate(45deg); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.faq-item.open .faq-answer { max-height: 600px; }
+
+.faq-answer-inner {
+  padding: 0 0 28px 0;
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  background: linear-gradient(170deg, var(--dark) 0%, #2A3E47 60%, #1E3440 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(74, 122, 140, 0.12), transparent);
+  pointer-events: none;
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196, 162, 101, 0.06), transparent);
+  pointer-events: none;
+}
+
+.contact .section-eyebrow { color: rgba(255,255,255,0.4); }
+.contact .section-eyebrow::before { background: var(--gradient-warm); }
+.contact .section-title { color: white; }
+.contact .section-desc { color: rgba(255,255,255,0.55); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-link:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(74, 122, 140, 0.4);
+  transform: translateX(6px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.contact-link svg {
+  width: 22px;
+  height: 22px;
+  color: var(--smoke-blue-light);
+  flex-shrink: 0;
+}
+
+.contact-link-text {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.contact-link-label {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 24px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.contact-quote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--gradient-warm);
+  border-radius: 1px;
+}
+
+.contact-quote-author {
+  font-size: 0.78rem;
+  color: var(--warm-gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-left: 28px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 32px 0;
+  background: #161E22;
+  text-align: center;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.06em;
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(250, 250, 248, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--dark);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover { color: var(--accent); }
+
+.mobile-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--dark);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 122, 140, 0.1);
+  transition: all 0.3s;
+}
+
+.mobile-close:hover { border-color: var(--accent); color: var(--accent); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container { padding: 0 24px; }
+  .nav-inner { padding: 0 24px; }
+  .nav-links { display: none; }
+  .burger { display: flex; }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 120px 24px 60px;
+  }
+
+  .hero-visual { display: none; }
+  .about-photo { width: 200px; }
+  .about-grid { gap: 40px; }
+  .symptoms-grid { grid-template-columns: 1fr 1fr; }
+  .service-content { padding: 0 24px 32px 24px; }
+  .service-header { padding: 24px; }
+  .service-header-left { gap: 14px; }
+  .service-header h3 { font-size: 1.1rem; }
+  .service-header-tag { display: none; }
+  .service-columns { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  section { padding: 70px 0; }
+  .about-stats { grid-template-columns: 1fr; }
+  .about-photo { width: 160px; margin-left: 20px; }
+  .service-pricing { flex-direction: column; }
+  .symptoms-grid { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      Sofie Panfilova
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about" data-lang-ru="Обо мне" data-lang-en="About" data-lang-cz="O mně">Обо мне</a></li>
+        <li><a href="#symptoms" data-lang-ru="Симптомы" data-lang-en="Symptoms" data-lang-cz="Příznaky">Симптомы</a></li>
+        <li><a href="#services" data-lang-ru="Услуги" data-lang-en="Services" data-lang-cz="Služby">Услуги</a></li>
+        <li><a href="#faq" data-lang-ru="FAQ" data-lang-en="FAQ" data-lang-cz="FAQ">FAQ</a></li>
+        <li><a href="#contact" data-lang-ru="Контакт" data-lang-en="Contact" data-lang-cz="Kontakt">Контакт</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('ru')">RU</button>
+        <button class="lang-btn" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('cz')">CZ</button>
+      </div>
+      <button class="burger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+  <a href="#about" onclick="toggleMenu()" data-lang-ru="Обо мне" data-lang-en="About" data-lang-cz="O mně">Обо мне</a>
+  <a href="#symptoms" onclick="toggleMenu()" data-lang-ru="Симптомы" data-lang-en="Symptoms" data-lang-cz="Příznaky">Симптомы</a>
+  <a href="#services" onclick="toggleMenu()" data-lang-ru="Услуги" data-lang-en="Services" data-lang-cz="Služby">Услуги</a>
+  <a href="#faq" onclick="toggleMenu()" data-lang-ru="FAQ" data-lang-en="FAQ" data-lang-cz="FAQ">FAQ</a>
+  <a href="#contact" onclick="toggleMenu()" data-lang-ru="Контакт" data-lang-en="Contact" data-lang-cz="Kontakt">Контакт</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-shape hero-shape-1"></div>
+  <div class="hero-shape hero-shape-2"></div>
+  <div class="hero-shape hero-shape-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow" data-lang-ru="Питание &middot; Долголетие &middot; Wellness" data-lang-en="Nutrition &middot; Longevity &middot; Wellness" data-lang-cz="Výživa &middot; Dlouhověkost &middot; Wellness">Питание &middot; Долголетие &middot; Wellness</div>
+      <h1 data-lang-ru="Персональные программы <em>долголетия</em> и управление здоровьем на основе данных" data-lang-en="Personalized <em>longevity</em> programs and data&#8209;driven health management" data-lang-cz="Personalizované programy <em>dlouhověkosti</em> a řízení zdraví na základě dat">Персональные программы <em>долголетия</em> и управление здоровьем на основе данных</h1>
+      <p class="hero-sub" data-lang-ru="Индивидуальное сопровождение для людей, ценящих своё время и здоровье." data-lang-en="Individual guidance for those who value their time and health." data-lang-cz="Individuální doprovázení pro ty, kdo si cení svého času a zdraví.">Индивидуальное сопровождение для людей, ценящих своё время и здоровье.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">
+          <span data-lang-ru="Записаться на консультацию" data-lang-en="Book a consultation" data-lang-cz="Objednat konzultaci">Записаться на консультацию</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn-secondary">
+          <span data-lang-ru="Услуги" data-lang-en="Services" data-lang-cz="Služby">Услуги</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-graphic">
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="orbit-dot orbit-dot-1"></div>
+        <div class="orbit-dot orbit-dot-2"></div>
+        <div class="circle-center">
+          <div class="circle-text">120+</div>
+          <div class="circle-text-small" data-lang-ru="лет активной жизни" data-lang-en="years of active life" data-lang-cz="let aktivního života">лет активной жизни</div>
+        </div>
+        <div class="float-badge float-badge-1"><span class="num">10+</span> <span data-lang-ru="лет опыта" data-lang-en="years exp." data-lang-cz="let zkušeností">лет опыта</span></div>
+        <div class="float-badge float-badge-2"><span class="num">3000+</span> <span data-lang-ru="клиентов" data-lang-en="clients" data-lang-cz="klientů">клиентов</span></div>
+        <div class="float-badge float-badge-3"><span class="num">5+</span> <span data-lang-ru="стран" data-lang-en="countries" data-lang-cz="zemí">стран</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="about-photo reveal">
+          <img src="sofie-photo.jpg" alt="Sofia Panfilova" loading="lazy">
+        </div>
+        <div class="section-eyebrow" data-lang-ru="Обо мне" data-lang-en="About me" data-lang-cz="O mně">Обо мне</div>
+        <h2 class="section-title reveal" data-lang-ru="София Панфилова" data-lang-en="Sofie Panfilova" data-lang-cz="Sofie Panfilova">София Панфилова</h2>
+        <p class="about-text-short reveal" data-lang-ru="Я — клинический диетолог, эксперт в области превентивной медицины и долголетия, амбассадор Global Wellness и консультант в HealthTech &amp; MedTech. Уже более десяти лет я помогаю людям улучшать своё здоровье, предотвращая болезни до их появления." data-lang-en="I'm a clinical dietitian, an expert in preventive medicine and longevity, a Global Wellness ambassador and HealthTech &amp; MedTech consultant. For over a decade I've been helping people improve their health by preventing diseases before they appear." data-lang-cz="Jsem klinická dietoložka, expertka v oblasti preventivní medicíny a dlouhověkosti, ambasádorka Global Wellness a konzultantka v HealthTech a MedTech. Již více než deset let pomáhám lidem zlepšovat jejich zdraví tím, že předcházím nemocem dříve, než se objeví.">Я — клинический диетолог, эксперт в области превентивной медицины и долголетия, амбассадор Global Wellness и консультант в HealthTech &amp; MedTech. Уже более десяти лет я помогаю людям улучшать своё здоровье, предотвращая болезни до их появления.</p>
+
+        <div class="about-text-full reveal" id="aboutFull">
+          <p data-lang-ru="Мой путь начался с клинической диетологии: я окончила Первый медицинский факультет Карлова университета в Праге, затем получила MBA в управлении здравоохранением. Много лет я работала с пациентами, изучала основы долголетия, создавала нутриционные и восстановительные программы в премиальной реабилитационной клинике HIVE и сети приватных медицинских центров American Medical Centers, а также получила опыт работы с биологическими добавками в компании Health Labs Care." data-lang-en="My journey began with clinical dietetics: I graduated from the First Faculty of Medicine at Charles University in Prague, then earned an MBA in healthcare management. For many years I worked with patients, studied the foundations of longevity, and created nutritional and recovery programs at the premium rehabilitation clinic HIVE and the private medical centers American Medical Centers, while also gaining experience in supplements at Health Labs Care." data-lang-cz="Moje cesta začala klinickou dietologií: absolvovala jsem 1. lékařskou fakultu Univerzity Karlovy v Praze a posléze získala MBA v managementu zdravotnictví. Dlouhá léta jsem pracovala s pacienty, studovala základy dlouhověkosti a vytvářela nutriční a regenerační programy v prémiové rehabilitační klinice HIVE a síti privátních zdravotnických center American Medical Centers.">Мой путь начался с клинической диетологии: я окончила Первый медицинский факультет Карлова университета в Праге, затем получила MBA в управлении здравоохранением. Много лет я работала с пациентами, изучала основы долголетия, создавала нутриционные и восстановительные программы в премиальной реабилитационной клинике HIVE и сети приватных медицинских центров American Medical Centers, а также получила опыт работы с биологическими добавками в компании Health Labs Care.</p>
+
+          <p data-lang-ru="Со временем мне стало тесно в рамках исключительно клинической практики. Я всё больше видела, что классическая медицина реагирует на последствия, а не предотвращает причины заболеваний. Так я пришла в сферу цифрового здравоохранения, где медицина соединяется с технологиями. В Чехии я стала одной из первых, кто внедрял персонализированные решения для здоровья на базе телемедицинских SaaS-систем." data-lang-en="Over time I outgrew purely clinical practice. I increasingly saw that conventional medicine reacts to consequences rather than preventing the causes of disease. This led me into digital health — where medicine meets technology. In the Czech Republic I became one of the first to implement personalized health solutions based on telemedicine SaaS platforms." data-lang-cz="Časem jsem přerostla čistě klinickou praxi. Stále více jsem viděla, že klasická medicína reaguje na následky, namísto aby předcházela příčinám onemocnění. To mě přivedlo do digitálního zdravotnictví. V České republice jsem byla jednou z prvních, kdo implementoval personalizovaná zdravotní řešení na bázi telemedicínských SaaS systémů.">Со временем мне стало тесно в рамках исключительно клинической практики. Я всё больше видела, что классическая медицина реагирует на последствия, а не предотвращает причины заболеваний. Так я пришла в сферу цифрового здравоохранения, где медицина соединяется с технологиями. В Чехии я стала одной из первых, кто внедрял персонализированные решения для здоровья на базе телемедицинских SaaS-систем.</p>
+
+          <p data-lang-ru="Важным этапом стала работа с израильской компанией Biognostica, разработавшей технологию перекрёстного анализа крови, которая позволяет глубже интерпретировать результаты лабораторных исследований. Этот опыт сформировал мой подход к здоровью как к системе, которой можно управлять и улучшать." data-lang-en="A key milestone was working with the Israeli company Biognostica, which developed a cross-analysis blood technology that enables deeper interpretation of lab results. This experience shaped my approach to health as a system that can be managed and improved." data-lang-cz="Klíčovou etapou byla spolupráce s izraelskou společností Biognostica, která vyvinula technologii křížové analýzy krve umožňující hlubší interpretaci laboratorních výsledků. Tato zkušenost formovala můj přístup ke zdraví jako k systému, který lze řídit a zlepšovat.">Важным этапом стала работа с израильской компанией Biognostica, разработавшей технологию перекрёстного анализа крови, которая позволяет глубже интерпретировать результаты лабораторных исследований. Этот опыт сформировал мой подход к здоровью как к системе, которой можно управлять и улучшать.</p>
+
+          <p data-lang-ru="Так появился мой эксклюзивный проект «Health as a Project» — методология, в которой здоровье становится структурированной системой с понятными метриками, стратегией улучшения и прогнозируемыми результатами. Всё так же, как управляют успешными компаниями, только объект — человеческий организм." data-lang-en="This gave rise to my exclusive project 'Health as a Project' — a methodology where health becomes a structured system with clear metrics, an improvement strategy, and predictable results. Just like managing a successful company, only the subject is the human body." data-lang-cz="Tak vznikl můj exkluzivní projekt «Health as a Project» — metodologie, ve které se zdraví stává strukturovaným systémem s jasnými metrikami, strategií zlepšení a předvídatelnými výsledky. Stejně jako se řídí úspěšné firmy, jen objektem je lidský organismus.">Так появился мой эксклюзивный проект «Health as a Project» — методология, в которой здоровье становится структурированной системой с понятными метриками, стратегией улучшения и прогнозируемыми результатами. Всё так же, как управляют успешными компаниями, только объект — человеческий организм.</p>
+
+          <p data-lang-ru="Сегодня я создаю персональные программы долголетия для частных клиентов по всему миру и консультирую проекты в HealthTech и MedTech. Моя глобальная цель — помогать людям жить дольше, активнее и качественнее, предотвращая болезни до их появления." data-lang-en="Today I create personalized longevity programs for private clients worldwide and consult on HealthTech and MedTech projects. My global mission is to help people live longer, more actively, and better by preventing disease before it starts." data-lang-cz="Dnes vytvářím personalizované programy dlouhověkosti pro soukromé klienty po celém světě a konzultuji projekty v HealthTech a MedTech. Mým globálním cílem je pomáhat lidem žít déle, aktivněji a kvalitativněji, a předcházet nemocem dříve, než se objeví.">Сегодня я создаю персональные программы долголетия для частных клиентов по всему миру и консультирую проекты в HealthTech и MedTech. Моя глобальная цель — помогать людям жить дольше, активнее и качественнее, предотвращая болезни до их появления.</p>
+        </div>
+
+        <button class="read-more-btn" id="readMoreBtn" onclick="toggleAbout()">
+          <span data-lang-ru="Читать далее" data-lang-en="Read more" data-lang-cz="Číst dále">Читать далее</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+
+        <div class="about-badges reveal">
+          <div class="badge-logo">
+            <img class="logo-seal" src="logo-uk.png" alt="1. Lékařská Fakulta, Univerzita Karlova">
+          </div>
+          <div class="badge-logo">
+            <img class="logo-seal" src="logo-esbm.png" alt="European School of Business & Management">
+          </div>
+          <div class="badge-logo">
+            <img class="logo-seal" src="logo-nesta.png" alt="NESTA — National Exercise & Sports Trainers Association">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="about-stats reveal" style="margin-top: 48px;">
+      <div class="stat-card">
+        <div class="stat-number" data-count="10">10+</div>
+        <div class="stat-label" data-lang-ru="лет опыта работы" data-lang-en="years of experience" data-lang-cz="let zkušeností">лет опыта работы</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-count="3000">3000+</div>
+        <div class="stat-label" data-lang-ru="клиентов прошли программы" data-lang-en="clients completed programs" data-lang-cz="klientů absolvovalo programy">клиентов прошли программы</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">360&deg;</div>
+        <div class="stat-label" data-lang-ru="подход к управлению здоровьем" data-lang-en="approach to health management" data-lang-cz="přístup k řízení zdraví">подход к управлению здоровьем</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYMPTOMS -->
+<section class="symptoms" id="symptoms">
+  <div class="container">
+    <div class="section-eyebrow" data-lang-ru="Знакомые симптомы?" data-lang-en="Familiar symptoms?" data-lang-cz="Známé příznaky?">Знакомые симптомы?</div>
+    <h2 class="section-title reveal" data-lang-ru="Возможно, причина <em>глубже</em>, чем вы думаете" data-lang-en="The root cause may be <em>deeper</em> than you think" data-lang-cz="Příčina může být <em>hlubší</em>, než si myslíte">Возможно, причина <em>глубже</em>, чем вы думаете</h2>
+    <p class="section-desc reveal" data-lang-ru="Многие симптомы — это сигналы организма о скрытых нарушениях, которые не всегда видны в стандартных анализах." data-lang-en="Many symptoms are the body's signals about hidden disruptions that standard tests don't always reveal." data-lang-cz="Mnohé příznaky jsou signály těla o skrytých poruchách, které standardní testy ne vždy odhalí.">Многие симптомы — это сигналы организма о скрытых нарушениях, которые не всегда видны в стандартных анализах.</p>
+
+    <div class="symptoms-grid">
+      <div class="symptom-card reveal">
+        <div class="symptom-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h4 data-lang-ru="Постоянная усталость" data-lang-en="Chronic fatigue" data-lang-cz="Chronická únava">Постоянная усталость</h4>
+        <p data-lang-ru="Часто связана с дефицитом микронутриентов, нарушением работы щитовидной железы или митохондриальной дисфункцией." data-lang-en="Often linked to micronutrient deficiencies, thyroid dysfunction, or mitochondrial issues." data-lang-cz="Často souvisí s deficitem mikroživin, dysfunkcí štítné žlázy či mitochondriálními problémy.">Часто связана с дефицитом микронутриентов, нарушением работы щитовидной железы или митохондриальной дисфункцией.</p>
+      </div>
+
+      <div class="symptom-card reveal reveal-delay-1">
+        <div class="symptom-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+        </div>
+        <h4 data-lang-ru="Проблемы с весом" data-lang-en="Weight issues" data-lang-cz="Problémy s váhou">Проблемы с весом</h4>
+        <p data-lang-ru="Лишний вес или резкое похудение могут указывать на инсулинорезистентность, гормональные сдвиги или хроническое воспаление." data-lang-en="Weight gain or sudden loss may indicate insulin resistance, hormonal shifts, or chronic inflammation." data-lang-cz="Přibývání nebo náhlé hubnutí mohou ukazovat na inzulínovou rezistenci, hormonální změny či chronický zánět.">Лишний вес или резкое похудение могут указывать на инсулинорезистентность, гормональные сдвиги или хроническое воспаление.</p>
+      </div>
+
+      <div class="symptom-card reveal reveal-delay-2">
+        <div class="symptom-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </div>
+        <h4 data-lang-ru="Гормональный дисбаланс" data-lang-en="Hormonal imbalance" data-lang-cz="Hormonální nerovnováha">Гормональный дисбаланс</h4>
+        <p data-lang-ru="Перепады настроения, раздражительность, снижение либидо — могут быть следствием нарушений, которые легко скорректировать." data-lang-en="Mood swings, irritability, decreased libido — may result from imbalances easily corrected with proper diagnostics." data-lang-cz="Výkyvy nálady, podrážděnost, snížené libido — mohou být důsledkem poruch, které lze snadno korigovat.">Перепады настроения, раздражительность, снижение либидо — могут быть следствием нарушений, которые легко скорректировать.</p>
+      </div>
+
+      <div class="symptom-card reveal">
+        <div class="symptom-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h4 data-lang-ru="Проблемы с пищеварением" data-lang-en="Digestive issues" data-lang-cz="Trávicí problémy">Проблемы с пищеварением</h4>
+        <p data-lang-ru="Вздутие, отёки, дискомфорт — часто результат пищевых непереносимостей, дисбиоза кишечника или системного воспаления." data-lang-en="Bloating, swelling, discomfort — often the result of food intolerances, gut dysbiosis, or systemic inflammation." data-lang-cz="Nadouvání, otéky, diskomfort — často důsledek potravinových intolerancí, střevní dysbiózy či systémového zánětu.">Вздутие, отёки, дискомфорт — часто результат пищевых непереносимостей, дисбиоза кишечника или системного воспаления.</p>
+      </div>
+
+      <div class="symptom-card reveal reveal-delay-1">
+        <div class="symptom-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </div>
+        <h4 data-lang-ru="Проблемы со сном" data-lang-en="Sleep problems" data-lang-cz="Problémy se spánkem">Проблемы со сном</h4>
+        <p data-lang-ru="Бессонница и некачественный сон ускоряют старение и часто связаны с дисбалансом кортизола и мелатонина." data-lang-en="Insomnia and poor sleep quality accelerate aging and are often linked to cortisol and melatonin imbalances." data-lang-cz="Nespavost a nekvalitní spánek urychlují stárnutí a často souvisí s nerovnováhou kortizolu a melatoninu.">Бессонница и некачественный сон ускоряют старение и часто связаны с дисбалансом кортизола и мелатонина.</p>
+      </div>
+
+      <div class="symptom-card reveal reveal-delay-2">
+        <div class="symptom-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h4 data-lang-ru="Анализы «в норме», но плохое самочувствие" data-lang-en="Tests 'normal', but you feel off" data-lang-cz="Výsledky «v normě», ale špatná pohoda">Анализы &laquo;в норме&raquo;, но плохое самочувствие</h4>
+        <p data-lang-ru="Стандартные анализы не всегда показывают полную картину. Углублённая интерпретация биомаркеров выявляет скрытые проблемы." data-lang-en="Standard tests don't always show the full picture. In-depth biomarker interpretation reveals hidden problems." data-lang-cz="Standardní testy ne vždy ukazují úplný obraz. Hloubková interpretace biomarkerů odhalí skryté problémy.">Стандартные анализы не всегда показывают полную картину. Углублённая интерпретация биомаркеров выявляет скрытые проблемы.</p>
+      </div>
+    </div>
+
+    <div class="symptoms-cta reveal">
+      <a href="#contact" class="btn-primary">
+        <span data-lang-ru="Разобраться в своей ситуации" data-lang-en="Understand your situation" data-lang-cz="Porozumět své situaci">Разобраться в своей ситуации</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-eyebrow" data-lang-ru="Услуги" data-lang-en="Services" data-lang-cz="Služby">Услуги</div>
+    <h2 class="section-title reveal" data-lang-ru="Программы и <em>консультации</em>" data-lang-en="Programs &amp; <em>consultations</em>" data-lang-cz="Programy a <em>konzultace</em>">Программы и <em>консультации</em></h2>
+    <p class="section-desc reveal" data-lang-ru="Каждая программа персонализирована и направлена на измеримый результат." data-lang-en="Each program is personalized and focused on measurable results." data-lang-cz="Každý program je personalizován a zaměřen na měřitelné výsledky.">Каждая программа персонализирована и направлена на измеримый результат.</p>
+
+    <div class="services-list">
+      <!-- SERVICE 1 -->
+      <div class="service-card reveal" id="svc1">
+        <div class="service-header" onclick="toggleService('svc1')">
+          <div class="service-header-left">
+            <span class="service-number">01</span>
+            <h3 data-lang-ru="Консультация диетолога" data-lang-en="Nutrition Consultation" data-lang-cz="Konzultace s nutričním specialistou">Консультация диетолога</h3>
+            <span class="service-header-tag" data-lang-ru="1,5 часа + follow-up" data-lang-en="1.5 hours + follow-up" data-lang-cz="1,5 hodiny + follow-up">1,5 часа + follow-up</span>
+          </div>
+          <div class="service-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="service-body">
+          <div class="service-content">
+            <p class="service-desc" data-lang-ru="Индивидуальная консультация, на которой мы разбираем ваш организм как систему: питание, обмен веществ, пищевые привычки, работу ЖКТ, уровень энергии и влияние питания на ваше общее состояние. Формат для тех, кто хочет точные ответы и понятную стратегию питания — без универсальных схем." data-lang-en="An individual consultation where we analyze your body as a system: nutrition, metabolism, eating habits, GI tract function, energy levels, and the impact of diet on your overall condition. For those who want precise answers and a clear nutrition strategy — no generic plans." data-lang-cz="Individuální konzultace, při které analyzujeme vaše tělo jako systém: výživu, metabolismus, stravovací návyky, funkci GIT, energii a vliv stravy na celkový stav. Pro ty, kdo chtějí přesné odpovědi a jasnou strategii výživy.">Индивидуальная консультация, на которой мы разбираем ваш организм как систему: питание, обмен веществ, пищевые привычки, работу ЖКТ, уровень энергии и влияние питания на ваше общее состояние. Формат для тех, кто хочет точные ответы и понятную стратегию питания — без универсальных схем.</p>
+            <div class="service-columns">
+              <div class="service-col">
+                <h5 data-lang-ru="На консультации" data-lang-en="During consultation" data-lang-cz="Na konzultaci">На консультации</h5>
+                <ul>
+                  <li data-lang-ru="Подробный анамнез и пищевые привычки" data-lang-en="Detailed medical history and eating habits" data-lang-cz="Podrobná anamnéza a stravovací návyky">Подробный анамнез и пищевые привычки</li>
+                  <li data-lang-ru="Анализ текущего питания и образа жизни" data-lang-en="Analysis of current diet and lifestyle" data-lang-cz="Analýza současné stravy a životního stylu">Анализ текущего питания и образа жизни</li>
+                  <li data-lang-ru="Определение необходимых анализов" data-lang-en="Determining which tests are truly needed" data-lang-cz="Určení potřebných analýz">Определение необходимых анализов</li>
+                  <li data-lang-ru="Поиск первопричин состояния" data-lang-en="Identifying root causes" data-lang-cz="Hledání příčin stavu">Поиск первопричин состояния</li>
+                  <li data-lang-ru="Стратегия питания и восстановления ЖКТ" data-lang-en="Nutrition strategy and GI restoration" data-lang-cz="Strategie výživy a obnovy GIT">Стратегия питания и восстановления ЖКТ</li>
+                  <li data-lang-ru="Подбор БАДов при необходимости" data-lang-en="Supplement recommendations if needed" data-lang-cz="Výběr doplňků dle potřeby">Подбор БАДов при необходимости</li>
+                </ul>
+              </div>
+              <div class="service-col">
+                <h5 data-lang-ru="Вы получаете" data-lang-en="You receive" data-lang-cz="Získáte">Вы получаете</h5>
+                <ul>
+                  <li data-lang-ru="Персональные рекомендации по питанию с примерами" data-lang-en="Personalized nutrition recommendations with examples" data-lang-cz="Personalizovaná doporučení k výživě s příklady">Персональные рекомендации по питанию с примерами</li>
+                  <li data-lang-ru="Понимание причин ваших симптомов" data-lang-en="Understanding of what causes your symptoms" data-lang-cz="Porozumění příčinám vašich příznaků">Понимание причин ваших симптомов</li>
+                  <li data-lang-ru="Список необходимых анализов" data-lang-en="List of necessary tests" data-lang-cz="Seznam potřebných analýz">Список необходимых анализов</li>
+                  <li data-lang-ru="Рекомендации по коррекции привычек" data-lang-en="Habit correction recommendations" data-lang-cz="Doporučení ke korekci návyků">Рекомендации по коррекции привычек</li>
+                  <li data-lang-ru="Траектория улучшения на 4–6 недель" data-lang-en="Improvement trajectory for 4–6 weeks" data-lang-cz="Trajektorie zlepšení na 4–6 týdnů">Траектория улучшения на 4–6 недель</li>
+                  <li data-lang-ru="Контрольная сессия через 2 недели (15 мин)" data-lang-en="Follow-up session in 2 weeks (15 min)" data-lang-cz="Kontrolní sezení za 2 týdny (15 min)">Контрольная сессия через 2 недели (15 мин)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-pricing">
+              <div class="price-tag">
+                <div class="label" data-lang-ru="Длительность" data-lang-en="Duration" data-lang-cz="Délka">Длительность</div>
+                <div class="price" data-lang-ru="1,5 часа + 15 мин" data-lang-en="1.5 hours + 15 min" data-lang-cz="1,5 hodiny + 15 min">1,5 часа + 15 мин</div>
+                <div class="note" data-lang-ru="контроль через 2 недели" data-lang-en="follow-up in 2 weeks" data-lang-cz="kontrola za 2 týdny">контроль через 2 недели</div>
+              </div>
+              <div class="price-tag">
+                <div class="label" data-lang-ru="Стоимость" data-lang-en="Price" data-lang-cz="Cena">Стоимость</div>
+                <div class="price">&euro;250</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn-outline"><span data-lang-ru="Записаться" data-lang-en="Book now" data-lang-cz="Objednat">Записаться</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICE 2 -->
+      <div class="service-card reveal" id="svc2">
+        <div class="service-header" onclick="toggleService('svc2')">
+          <div class="service-header-left">
+            <span class="service-number">02</span>
+            <h3 data-lang-ru="Нутриционное сопровождение" data-lang-en="Nutritional Support Program" data-lang-cz="Nutriční doprovázení">Нутриционное сопровождение</h3>
+            <span class="service-header-tag" data-lang-ru="5 недель" data-lang-en="5 weeks" data-lang-cz="5 týdnů">5 недель</span>
+          </div>
+          <div class="service-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="service-body">
+          <div class="service-content">
+            <p class="service-desc" data-lang-ru="Программа сопровождения для достижения ваших целей по питанию и здоровью. Подходит, если вы хотите избавиться от лишнего веса навсегда, перепробовали все диеты, хотите добиться результата с комфортом и поддержкой." data-lang-en="A support program to achieve your nutrition and health goals. Ideal if you want to lose weight permanently, have tried every diet, and want results with comfort and support." data-lang-cz="Program doprovázení k dosažení vašich cílů v oblasti výživy a zdraví. Vhodné pokud chcete trvale zhubnout, vyzkoušeli jste všechny diety a chcete výsledky s komfortem a podporou.">Программа сопровождения для достижения ваших целей по питанию и здоровью. Подходит, если вы хотите избавиться от лишнего веса навсегда, перепробовали все диеты, хотите добиться результата с комфортом и поддержкой.</p>
+            <div class="service-stages">
+              <div class="stage">
+                <div class="stage-header"><span class="stage-num">1</span><span class="stage-title" data-lang-ru="Определение точки А и постановка целей" data-lang-en="Defining your starting point and setting goals" data-lang-cz="Určení výchozího bodu a stanovení cílů">Определение точки А и постановка целей</span></div>
+                <div class="stage-body"><ul><li data-lang-ru="SMART-опросник, индивидуальный список анализов, разбор лабораторных результатов" data-lang-en="SMART questionnaire, personalized test list, lab results analysis" data-lang-cz="SMART dotazník, individuální seznam analýz, rozbor laboratorních výsledků">SMART-опросник, индивидуальный список анализов, разбор лабораторных результатов</li></ul></div>
+              </div>
+              <div class="stage">
+                <div class="stage-header"><span class="stage-num">2</span><span class="stage-title" data-lang-ru="Персонализированный план оздоровления" data-lang-en="Personalized wellness plan" data-lang-cz="Personalizovaný plán ozdravění">Персонализированный план оздоровления</span></div>
+                <div class="stage-body"><ul><li data-lang-ru="Рекомендации по питанию, план добавок, онлайн-консультация с разбором стратегии" data-lang-en="Nutrition recommendations, supplement plan, online consultation with strategy review" data-lang-cz="Doporučení k výživě, plán doplňků, online konzultace s rozborem strategie">Рекомендации по питанию, план добавок, онлайн-консультация с разбором стратегии</li></ul></div>
+              </div>
+              <div class="stage">
+                <div class="stage-header"><span class="stage-num">3</span><span class="stage-title" data-lang-ru="Индивидуальное сопровождение" data-lang-en="Individual ongoing support" data-lang-cz="Individuální doprovázení">Индивидуальное сопровождение</span></div>
+                <div class="stage-body"><ul><li data-lang-ru="Ежедневная поддержка в чате, корректировка питания, помощь с выбором продуктов, разбор контрольных анализов" data-lang-en="Daily chat support, diet adjustments, product guidance, control test analysis" data-lang-cz="Denní podpora v chatu, korekce stravy, pomoc s výběrem potravin, rozbor kontrolních analýz">Ежедневная поддержка в чате, корректировка питания, помощь с выбором продуктов, разбор контрольных анализов</li></ul></div>
+              </div>
+            </div>
+            <div class="service-pricing">
+              <div class="price-tag">
+                <div class="label" data-lang-ru="Длительность" data-lang-en="Duration" data-lang-cz="Délka">Длительность</div>
+                <div class="price" data-lang-ru="5 недель" data-lang-en="5 weeks" data-lang-cz="5 týdnů">5 недель</div>
+              </div>
+              <div class="price-tag">
+                <div class="label" data-lang-ru="Стоимость" data-lang-en="Price" data-lang-cz="Cena">Стоимость</div>
+                <div class="price">&euro;750</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn-outline"><span data-lang-ru="Записаться" data-lang-en="Book now" data-lang-cz="Objednat">Записаться</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICE 3 -->
+      <div class="service-card reveal" id="svc3">
+        <div class="service-header" onclick="toggleService('svc3')">
+          <div class="service-header-left">
+            <span class="service-number">03</span>
+            <h3 data-lang-ru="Health as a Project" data-lang-en="Health as a Project" data-lang-cz="Health as a Project">Health as a Project</h3>
+            <span class="service-header-tag" data-lang-ru="3 месяца" data-lang-en="3 months" data-lang-cz="3 měsíce">3 месяца</span>
+          </div>
+          <div class="service-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="service-body">
+          <div class="service-content">
+            <p class="service-desc" data-lang-ru="Флагманская программа активного долголетия. Объединяет превентивную медицину, аналитику и новейшие знания о здоровье. Мы исследуем маркеры старения, выявляем и устраняем скрытые причины ухудшения самочувствия и управляем здоровьем на уровне ДНК. Ваш биологический возраст становится управляемой метрикой." data-lang-en="The flagship active longevity program. Combines preventive medicine, analytics, and cutting-edge health science. We examine aging markers, identify and eliminate hidden causes of decline, and manage health at the DNA level. Your biological age becomes a manageable metric." data-lang-cz="Vlajkový program aktivní dlouhověkosti. Spojuje preventivní medicínu, analytiku a nejnovější poznatky o zdraví. Zkoumáme markery stárnutí, identifikujeme a odstraňujeme skryté příčiny zhoršení a řídíme zdraví na úrovni DNA. Váš biologický věk se stává říditelnou metrikou.">Флагманская программа активного долголетия. Объединяет превентивную медицину, аналитику и новейшие знания о здоровье. Мы исследуем маркеры старения, выявляем и устраняем скрытые причины ухудшения самочувствия и управляем здоровьем на уровне ДНК. Ваш биологический возраст становится управляемой метрикой.</p>
+            <div class="service-stages">
+              <div class="stage">
+                <div class="stage-header"><span class="stage-num">1</span><span class="stage-title" data-lang-ru="Health Audit — глубокая диагностика" data-lang-en="Health Audit — deep diagnostics" data-lang-cz="Health Audit — hloubková diagnostika">Health Audit — глубокая диагностика</span></div>
+                <div class="stage-body"><ul>
+                  <li data-lang-ru="Смарт-опросник и индивидуальный список анализов крови" data-lang-en="Smart questionnaire and personalized blood test panel" data-lang-cz="Smart dotazník a individuální seznam krevních testů">Смарт-опросник и индивидуальный список анализов крови</li>
+                  <li data-lang-ru="ДНК-тест генетических предрасположенностей" data-lang-en="DNA test for genetic predispositions" data-lang-cz="DNA test genetických predispozic">ДНК-тест генетических предрасположенностей</li>
+                  <li data-lang-ru="Тест на пищевые непереносимости" data-lang-en="Food intolerance testing" data-lang-cz="Test potravinových intolerancí">Тест на пищевые непереносимости</li>
+                  <li data-lang-ru="Профиль органических кислот, подсчёт теломер" data-lang-en="Organic acids profile, telomere analysis" data-lang-cz="Profil organických kyselin, analýza telomer">Профиль органических кислот, подсчёт теломер</li>
+                </ul></div>
+              </div>
+              <div class="stage">
+                <div class="stage-header"><span class="stage-num">2</span><span class="stage-title" data-lang-ru="Персонализированный план оздоровления" data-lang-en="Personalized wellness plan" data-lang-cz="Personalizovaný plán ozdravění">Персонализированный план оздоровления</span></div>
+                <div class="stage-body"><ul>
+                  <li data-lang-ru="Рекомендации по питанию, план БАДов, режим сна и активности" data-lang-en="Nutrition plan, supplements, sleep and activity regimen" data-lang-cz="Výživový plán, doplňky, režim spánku a aktivity">Рекомендации по питанию, план БАДов, режим сна и активности</li>
+                  <li data-lang-ru="Подбор трекеров здоровья (CGM, Oura Ring и др.)" data-lang-en="Health tracker selection (CGM, Oura Ring, etc.)" data-lang-cz="Výběr zdravotních trackerů (CGM, Oura Ring atd.)">Подбор трекеров здоровья (CGM, Oura Ring и др.)</li>
+                  <li data-lang-ru="Подбор процедур и longevity-гаджетов" data-lang-en="Procedures and longevity gadget selection" data-lang-cz="Výběr procedur a longevity gadžetů">Подбор процедур и longevity-гаджетов</li>
+                </ul></div>
+              </div>
+              <div class="stage">
+                <div class="stage-header"><span class="stage-num">3</span><span class="stage-title" data-lang-ru="Индивидуальное сопровождение" data-lang-en="Individual ongoing support" data-lang-cz="Individuální doprovázení">Индивидуальное сопровождение</span></div>
+                <div class="stage-body"><ul>
+                  <li data-lang-ru="2 онлайн-сессии в месяц + поддержка в чате" data-lang-en="2 online sessions per month + chat support" data-lang-cz="2 online sezení měsíčně + podpora v chatu">2 онлайн-сессии в месяц + поддержка в чате</li>
+                  <li data-lang-ru="Ежедневная корректировка питания" data-lang-en="Daily nutrition adjustments" data-lang-cz="Denní korekce stravy">Ежедневная корректировка питания</li>
+                  <li data-lang-ru="Разбор контрольных анализов и обновление плана" data-lang-en="Control test reviews and plan updates" data-lang-cz="Rozbor kontrolních analýz a aktualizace plánu">Разбор контрольных анализов и обновление плана</li>
+                </ul></div>
+              </div>
+            </div>
+            <div class="service-pricing">
+              <div class="price-tag">
+                <div class="label" data-lang-ru="Длительность" data-lang-en="Duration" data-lang-cz="Délka">Длительность</div>
+                <div class="price" data-lang-ru="3 месяца" data-lang-en="3 months" data-lang-cz="3 měsíce">3 месяца</div>
+              </div>
+              <div class="price-tag">
+                <div class="label" data-lang-ru="Стоимость" data-lang-en="Price" data-lang-cz="Cena">Стоимость</div>
+                <div class="price">&euro;1500</div>
+                <div class="note" data-lang-ru="ДНК-тесты, тесты на пищевые непереносимости, профиль органических кислот и другие исследования подбираются индивидуально и не входят в стоимость программы" data-lang-en="DNA tests, food intolerance tests, organic acids profile and other studies are selected individually and are not included in the program price" data-lang-cz="DNA testy, testy potravinových intolerancí, profil organických kyselin a další vyšetření se vybírají individuálně a nejsou zahrnuty v ceně programu">ДНК-тесты, тесты на пищевые непереносимости, профиль органических кислот и другие исследования подбираются индивидуально и не входят в стоимость программы</div>
+              </div>
+            </div>
+            <a href="#contact" class="btn-outline"><span data-lang-ru="Записаться" data-lang-en="Book now" data-lang-cz="Objednat">Записаться</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TELEGRAM CHANNEL BANNER -->
+<div class="tg-banner">
+  <div class="tg-banner-inner">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    <a href="https://t.me/sofiehealth" target="_blank" rel="noopener">
+      <span data-lang-ru="Подписывайтесь на мой Telegram-канал о здоровье и долголетии" data-lang-en="Follow my Telegram channel about health & longevity" data-lang-cz="Sledujte můj Telegram kanál o zdraví a dlouhověkosti">Подписывайтесь на мой Telegram-канал о здоровье и долголетии</span>
+    </a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-eyebrow" data-lang-ru="Вопросы" data-lang-en="Questions" data-lang-cz="Otázky">Вопросы</div>
+    <h2 class="section-title" data-lang-ru="Частые вопросы" data-lang-en="Frequently Asked Questions" data-lang-cz="Časté dotazy">Частые вопросы</h2>
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4 data-lang-ru="Как устроена ваша работа?" data-lang-en="How does your practice work?" data-lang-cz="Jak funguje vaše praxe?">Как устроена ваша работа?</h4>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner" data-lang-ru="Я работаю с тем, что часто остаётся без внимания: усталость, набор веса, хронический стресс, ухудшение показателей. Всё это кажется «не срочным» — но со временем перерастает в серьёзные проблемы, когда восстановление требует гораздо больше усилий и денег. Мой подход — научная превенция: мы выявляем риски до появления диагнозов и мягко корректируем состояние организма. Я детально разбираю ваши анализы и на их основе выстраиваю персональную стратегию — питание, нутриенты, ежедневная поддержка. Никаких универсальных схем — только то, что подходит именно вам." data-lang-en="I work with what often gets overlooked: fatigue, weight gain, chronic stress, declining health markers. These seem 'not urgent' — but over time develop into serious problems requiring much more effort and expense to resolve. My approach is science-based prevention: we identify risks before diagnoses appear and gently correct the body's condition. I thoroughly analyze your lab results and build a personalized strategy — nutrition, supplements, daily support. No universal templates — only what works for you specifically." data-lang-cz="Pracuji s tím, co se často přehlíží: únava, přibírání na váze, chronický stres, zhoršující se ukazatele. Zdá se to 'neurgentní' — ale postupem času přeroste ve vážné problémy vyžadující mnohem více úsilí a nákladů. Můj přístup je vědecká prevence: identifikujeme rizika před vznikem diagnóz a jemně korigujeme stav organismu. Detailně rozeberu vaše výsledky a na jejich základě vytvořím personalizovanou strategii — výživu, doplňky, denní podporu. Žádné univerzální šablony — pouze to, co funguje právě pro vás.">Я работаю с тем, что часто остаётся без внимания: усталость, набор веса, хронический стресс, ухудшение показателей. Всё это кажется «не срочным» — но со временем перерастает в серьёзные проблемы, когда восстановление требует гораздо больше усилий и денег. Мой подход — научная превенция: мы выявляем риски до появления диагнозов и мягко корректируем состояние организма. Я детально разбираю ваши анализы и на их основе выстраиваю персональную стратегию — питание, нутриенты, ежедневная поддержка. Никаких универсальных схем — только то, что подходит именно вам.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4 data-lang-ru="Я уже много вложил в здоровье и регулярно сдаю анализы. Будет ли мне полезно сопровождение?" data-lang-en="I've already invested a lot in my health and regularly get tested. Would your program still be useful?" data-lang-cz="Už jsem hodně investoval do svého zdraví a pravidelně podstupuji vyšetření. Bude mi váš program užitečný?">Я уже много вложил в здоровье и регулярно сдаю анализы. Будет ли мне полезно сопровождение?</h4>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner" data-lang-ru="Скорее всего, да. Анализы — это данные, но ценность в их правильной интерпретации и действиях на их основе. Я помогу превратить накопленную информацию в работающую стратегию: скорректировать питание, образ жизни и привычки так, чтобы вы не просто «сдавали анализы», а реально улучшали качество жизни." data-lang-en="Most likely, yes. Tests are data, but the real value lies in their proper interpretation and actionable follow-through. I'll help turn your accumulated information into a working strategy: adjusting nutrition, lifestyle, and habits so you're not just 'getting tested' but genuinely improving your quality of life." data-lang-cz="Nejspíš ano. Testy jsou data, ale skutečná hodnota spočívá v jejich správné interpretaci a následných krocích. Pomohu vám přeměnit nashromážděné informace v fungující strategii: úpravou výživy, životního stylu a návyků tak, abyste nejen 'podstupovali vyšetření', ale skutečně zlepšovali kvalitu svého života.">Скорее всего, да. Анализы — это данные, но ценность в их правильной интерпретации и действиях на их основе. Я помогу превратить накопленную информацию в работающую стратегию: скорректировать питание, образ жизни и привычки так, чтобы вы не просто «сдавали анализы», а реально улучшали качество жизни.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4 data-lang-ru="Чем ваш подход отличается от обычного нутрициолога в клинике?" data-lang-en="How is your approach different from a regular nutritionist at a clinic?" data-lang-cz="Čím se váš přístup liší od běžného nutricionisty v klinice?">Чем ваш подход отличается от обычного нутрициолога в клинике?</h4>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner" data-lang-ru="Три ключевых отличия. Во-первых, глубина: каждый случай разбирается индивидуально и комплексно — то, что сработало у одного клиента, не копируется на другого. Во-вторых, непрерывная связь: я всегда на связи, а не только во время приёма. Это помогает сохранять мотивацию, оперативно решать вопросы и закреплять новые привычки. В-третьих, внимание к деталям — я отношусь к каждому клиенту как к единственному." data-lang-en="Three key differences. First, depth: each case is analyzed individually and holistically — what worked for one client isn't copied to another. Second, continuous connection: I'm always available, not just during appointments. This helps maintain motivation, quickly resolve questions, and reinforce new habits. Third, attention to detail — I treat every client as if they're my only one." data-lang-cz="Tři klíčové rozdíly. Za prvé, hloubka: každý případ je analyzován individuálně a komplexně — co fungovalo u jednoho klienta, se nekopíruje na druhého. Za druhé, nepřetržitý kontakt: jsem vždy k dispozici, nejen během konzultací. To pomáhá udržovat motivaci, rychle řešit otázky a upevňovat nové návyky. Za třetí, pozornost k detailům — ke každému klientovi přistupuji jako k jedinému.">Три ключевых отличия. Во-первых, глубина: каждый случай разбирается индивидуально и комплексно — то, что сработало у одного клиента, не копируется на другого. Во-вторых, непрерывная связь: я всегда на связи, а не только во время приёма. Это помогает сохранять мотивацию, оперативно решать вопросы и закреплять новые привычки. В-третьих, внимание к деталям — я отношусь к каждому клиенту как к единственному.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4 data-lang-ru="Входят ли анализы в стоимость программ?" data-lang-en="Are tests included in the program price?" data-lang-cz="Jsou testy zahrnuty v ceně programu?">Входят ли анализы в стоимость программ?</h4>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner" data-lang-ru="Нет. Все анализы подбираются индивидуально, и вы сдаёте их самостоятельно по месту нахождения. Я помогу выбрать подходящую лабораторию, а для участников программы Health as a Project — организую оформление генетических тестов с доставкой на дом." data-lang-en="No. All tests are selected individually, and you take them at a lab near you. I'll help you choose the right laboratory, and for Health as a Project participants — I'll arrange home delivery of genetic testing kits." data-lang-cz="Ne. Všechny testy se vybírají individuálně a absolvujete je sami v místě vašeho bydliště. Pomohu vám vybrat vhodnou laboratoř a pro účastníky programu Health as a Project — zařídím doručení genetických testů domů.">Нет. Все анализы подбираются индивидуально, и вы сдаёте их самостоятельно по месту нахождения. Я помогу выбрать подходящую лабораторию, а для участников программы Health as a Project — организую оформление генетических тестов с доставкой на дом.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4 data-lang-ru="Какие гарантии результата?" data-lang-en="What guarantees do you offer?" data-lang-cz="Jaké záruky nabízíte?">Какие гарантии результата?</h4>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner" data-lang-ru="Я работаю на результат. Если при соблюдении всех рекомендаций улучшений нет — я верну деньги. Подход всегда комплексный и персональный: мы смотрим на ситуацию глобально, а не локально. Плюс — всё работает онлайн: не нужно никуда ехать, я всегда на связи. И это выгодно: инвестируя в здоровье сейчас, вы экономите на лечении хронических заболеваний в будущем." data-lang-en="I work for results. If improvements don't come despite following all recommendations — I'll refund your money. My approach is always comprehensive and personal: we look at the situation globally, not locally. Everything works online: no travel needed, I'm always available. And it's a smart investment: by investing in your health now, you save on treating chronic conditions in the future." data-lang-cz="Pracuji na výsledek. Pokud při dodržení všech doporučení nedojde ke zlepšení — vrátím vám peníze. Můj přístup je vždy komplexní a osobní: na situaci se díváme globálně, ne lokálně. Vše funguje online: nemusíte nikam cestovat, jsem vždy k dispozici. A je to chytrá investice: investicí do zdraví nyní šetříte na léčbě chronických onemocnění v budoucnu.">Я работаю на результат. Если при соблюдении всех рекомендаций улучшений нет — я верну деньги. Подход всегда комплексный и персональный: мы смотрим на ситуацию глобально, а не локально. Плюс — всё работает онлайн: не нужно никуда ехать, я всегда на связи. И это выгодно: инвестируя в здоровье сейчас, вы экономите на лечении хронических заболеваний в будущем.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4 data-lang-ru="У меня мало свободного времени. Получится ли пройти сопровождение?" data-lang-en="I don't have much free time. Can I still do the program?" data-lang-cz="Nemám moc volného času. Zvládnu program?">У меня мало свободного времени. Получится ли пройти сопровождение?</h4>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner" data-lang-ru="Да. Всё проходит онлайн, и я подстраиваюсь под ваш график. Достаточно 10–15 минут в день на анализ и корректировку рациона. Я также работаю по выходным, когда мы можем уделить больше времени вашим вопросам." data-lang-en="Yes. Everything is online, and I adjust to your schedule. Just 10–15 minutes a day for diet tracking and adjustments is enough. I also work on weekends, when we can dedicate more time to your questions." data-lang-cz="Ano. Vše probíhá online a přizpůsobuji se vašemu rozvrhu. Stačí 10–15 minut denně na sledování a úpravu jídelníčku. Pracuji i o víkendech, kdy se můžeme více věnovat vašim otázkám.">Да. Всё проходит онлайн, и я подстраиваюсь под ваш график. Достаточно 10–15 минут в день на анализ и корректировку рациона. Я также работаю по выходным, когда мы можем уделить больше времени вашим вопросам.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4 data-lang-ru="Можете ли вы помочь при хронических заболеваниях?" data-lang-en="Can you help with chronic conditions?" data-lang-cz="Můžete pomoci s chronickými onemocněními?">Можете ли вы помочь при хронических заболеваниях?</h4>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner" data-lang-ru="Да. Я подберу рацион с учётом ваших диагнозов и показателей крови, чтобы снизить симптомы и улучшить самочувствие. Также дам рекомендации по образу жизни, которые помогут вашему организму справляться с нагрузкой эффективнее." data-lang-en="Yes. I'll design a diet plan considering your diagnoses and blood work to reduce symptoms and improve well-being. I'll also provide lifestyle recommendations to help your body cope with the load more effectively." data-lang-cz="Ano. Sestavím jídelníček s ohledem na vaše diagnózy a krevní výsledky, abych zmírnila příznaky a zlepšila vaši pohodu. Poskytnu také doporučení k životnímu stylu, která pomohou vašemu tělu lépe zvládat zátěž.">Да. Я подберу рацион с учётом ваших диагнозов и показателей крови, чтобы снизить симптомы и улучшить самочувствие. Также дам рекомендации по образу жизни, которые помогут вашему организму справляться с нагрузкой эффективнее.</div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <h4 data-lang-ru="А если у меня нет жалоб на здоровье — зачем мне это?" data-lang-en="What if I have no health complaints — why would I need this?" data-lang-cz="Co když nemám žádné zdravotní potíže — proč bych to potřeboval?">А если у меня нет жалоб на здоровье — зачем мне это?</h4>
+          <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner" data-lang-ru="Именно для того, чтобы жалоб не появилось. Современный ритм жизни, стресс и несбалансированный рацион влияют на каждого. Даже если сейчас всё в порядке, мы выстроим стратегию для укрепления текущего состояния и продления активного долголетия — от анализа питания и среды до подбора современных гаджетов для мониторинга здоровья. Отдельно могу предложить сопровождение для ваших близких и родителей." data-lang-en="Exactly so that complaints don't appear. Modern pace of life, stress, and unbalanced diet affect everyone. Even if everything is fine now, we'll build a strategy to strengthen your current state and extend active longevity — from nutrition and environment analysis to selecting modern health monitoring gadgets. I can also offer programs for your family and parents." data-lang-cz="Právě proto, aby se žádné potíže neobjevily. Moderní tempo života, stres a nevyvážená strava ovlivňují každého. I když je nyní vše v pořádku, vytvoříme strategii pro posílení vašeho aktuálního stavu a prodloužení aktivní dlouhověkosti — od analýzy výživy a prostředí po výběr moderních gadgetů pro monitoring zdraví. Mohu také nabídnout programy pro vaše blízké a rodiče.">Именно для того, чтобы жалоб не появилось. Современный ритм жизни, стресс и несбалансированный рацион влияют на каждого. Даже если сейчас всё в порядке, мы выстроим стратегию для укрепления текущего состояния и продления активного долголетия — от анализа питания и среды до подбора современных гаджетов для мониторинга здоровья. Отдельно могу предложить сопровождение для ваших близких и родителей.</div></div>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+      <p style="font-size: 1.1rem; color: var(--text); margin-bottom: 16px;" data-lang-ru="Остались вопросы?" data-lang-en="Still have questions?" data-lang-cz="Máte další otázky?">Остались вопросы?</p>
+      <a href="#contact" class="btn-primary" style="display: inline-flex;"><span data-lang-ru="Свяжитесь со мной" data-lang-en="Get in touch" data-lang-cz="Kontaktujte mě">Свяжитесь со мной</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="section-eyebrow" data-lang-ru="Связаться" data-lang-en="Get in touch" data-lang-cz="Kontakt">Связаться</div>
+        <h2 class="section-title" data-lang-ru="Начните путь к здоровью сегодня" data-lang-en="Start your health journey today" data-lang-cz="Začněte svou cestu ke zdraví dnes">Начните путь к здоровью сегодня</h2>
+        <p class="section-desc" data-lang-ru="Запишитесь на консультацию удобным для вас способом. Я работаю с клиентами по всему миру онлайн." data-lang-en="Book a consultation in a way that suits you best. I work with clients worldwide, online." data-lang-cz="Objednejte si konzultaci způsobem, který vám vyhovuje. Pracuji s klienty po celém světě online.">Запишитесь на консультацию удобным для вас способом. Я работаю с клиентами по всему миру онлайн.</p>
+
+        <div class="contact-channels" style="margin-top: 32px;">
+          <a href="https://t.me/sofievp" class="contact-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            <div>
+              <div class="contact-link-text">Telegram</div>
+              <div class="contact-link-label" data-lang-ru="Написать в Telegram" data-lang-en="Message on Telegram" data-lang-cz="Napsat na Telegram">Написать в Telegram</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/420732175477" class="contact-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <div>
+              <div class="contact-link-text">WhatsApp</div>
+              <div class="contact-link-label" data-lang-ru="Написать в WhatsApp" data-lang-en="Message on WhatsApp" data-lang-cz="Napsat na WhatsApp">Написать в WhatsApp</div>
+            </div>
+          </a>
+
+          <a href="mailto:sofia.panfilova@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <div>
+              <div class="contact-link-text">Email</div>
+              <div class="contact-link-label">sofia.panfilova@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="https://calendly.com/sofievp" class="contact-link" id="calendarLink" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div>
+              <div class="contact-link-text" data-lang-ru="Записаться в календарь" data-lang-en="Book via calendar" data-lang-cz="Rezervovat v kalendáři">Записаться в календарь</div>
+              <div class="contact-link-label" data-lang-ru="Выберите удобное время" data-lang-en="Choose a convenient time" data-lang-cz="Vyberte si vhodný čas">Выберите удобное время</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    &copy; 2026 Sofie Panfilova. <span data-lang-ru="Все права защищены." data-lang-en="All rights reserved." data-lang-cz="Všechna práva vyhrazena.">Все права защищены.</span>
+  </div>
+</footer>
+
+<script>
+// Language switching
+let currentLang = 'ru';
+
+function switchLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+  });
+  document.querySelectorAll('[data-lang-' + lang + ']').forEach(el => {
+    const val = el.getAttribute('data-lang-' + lang);
+    if (val) el.innerHTML = val;
+  });
+  document.documentElement.lang = lang === 'cz' ? 'cs' : lang;
+}
+
+// Navbar scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// About read more
+function toggleAbout() {
+  const full = document.getElementById('aboutFull');
+  const btn = document.getElementById('readMoreBtn');
+  full.classList.toggle('expanded');
+  btn.classList.toggle('expanded');
+  const isExpanded = full.classList.contains('expanded');
+  const texts = { ru: isExpanded ? 'Свернуть' : 'Читать далее', en: isExpanded ? 'Show less' : 'Read more', cz: isExpanded ? 'Zobrazit méně' : 'Číst dále' };
+  btn.querySelector('span').textContent = texts[currentLang] || texts.ru;
+}
+
+// Service accordion
+function toggleService(id) {
+  const card = document.getElementById(id);
+  const wasOpen = card.classList.contains('open');
+  document.querySelectorAll('.service-card').forEach(c => c.classList.remove('open'));
+  if (!wasOpen) card.classList.add('open');
+}
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// Animated counters
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.count);
+      if (!target || el.dataset.animated) return;
+      el.dataset.animated = 'true';
+      let current = 0;
+      const step = Math.max(1, Math.floor(target / 60));
+      const interval = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(interval); }
+        el.textContent = current + '+';
+      }, 25);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+</script>
+</body>
+</html>
