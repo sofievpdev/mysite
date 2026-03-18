@@ -2398,35 +2398,30 @@ document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(
 </div>
 </div>
 
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Email Integration -->
 <script>
-// ============================================================
-// EMAILJS SETUP — INSTRUCTIONS FOR SOFIE
-// ============================================================
-// 1. Go to https://www.emailjs.com and create a free account
-// 2. Add your email service (Gmail, Outlook, etc.)
-// 3. Create an email template with these variables:
-//    - {{to_email}} — recipient's email
-//    - {{guide_link}} — link to the guide
-//    Template example subject: "Ваш гайд: 5 анализов"
-//    Template example body: "Здравствуйте! Вот ваш гайд: {{guide_link}}"
-// 4. Replace the 3 values below with your actual IDs:
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';    // Dashboard → Account → API Keys
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';    // Dashboard → Email Services
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // Dashboard → Email Templates
-// ============================================================
+// API endpoint for email subscription (Brevo key stored server-side)
+var API_URL = 'https://sofievp-api.onrender.com';
 
-(function() {
-  if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
-  }
-})();
+// Subscribe: add contact to list + send guide email
+function brevoSubmit(email) {
+  var guideLink = window.location.origin + '/guide-5-analizov.html';
+
+  fetch(API_URL + '/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, guide_link: guideLink })
+  }).catch(function(err) {
+    console.log('Subscribe error:', err);
+  });
+}
 
 // Show popup after 30 seconds or on exit intent
-let lmShown = false;
+var lmShown = false;
 function showLM() {
   if (lmShown || sessionStorage.getItem('lm_closed')) return;
+  // Don't show if user already submitted email
+  if (localStorage.getItem('lm_email')) return;
   lmShown = true;
   document.getElementById('lmOverlay').classList.add('active');
 }
@@ -2450,7 +2445,7 @@ document.getElementById('lmOverlay').addEventListener('click', function(e) {
 });
 
 function submitLM() {
-  const email = document.getElementById('lmEmail').value.trim();
+  var email = document.getElementById('lmEmail').value.trim();
   if (!email || !email.includes('@')) {
     document.getElementById('lmEmail').style.borderColor = '#c44';
     return;
@@ -2466,15 +2461,8 @@ function submitLM() {
   document.getElementById('lmFormState').style.display = 'none';
   document.getElementById('lmSuccess').style.display = 'block';
 
-  // Send email via EmailJS (if configured)
-  if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
-    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-      to_email: email,
-      guide_link: window.location.origin + '/guide-5-analizov.html'
-    }).catch(function(err) {
-      console.log('EmailJS error:', err);
-    });
-  }
+  // Send to Brevo: add to list + send guide email
+  brevoSubmit(email);
 
   sessionStorage.setItem('lm_closed', '1');
 

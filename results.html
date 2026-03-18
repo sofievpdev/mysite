@@ -1631,6 +1631,22 @@ transition: all 0.3s;
 </div>
 
 <script>
+// API endpoint for email subscription (Brevo key stored server-side)
+var API_URL = 'https://sofievp-api.onrender.com';
+
+// Subscribe: add contact to list + send guide email
+function brevoSubmit(email) {
+  var guideLink = window.location.origin + '/guide-5-analizov.html';
+
+  fetch(API_URL + '/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, guide_link: guideLink })
+  }).catch(function(err) {
+    console.log('Subscribe error:', err);
+  });
+}
+
 // Guide popup logic
 function openGuideOrPopup(e) {
   if (e) e.preventDefault();
@@ -1668,6 +1684,9 @@ function submitLM() {
   // Show success state
   document.getElementById('lmFormState').style.display = 'none';
   document.getElementById('lmSuccess').style.display = 'block';
+
+  // Send to Brevo: add to list + send guide email
+  brevoSubmit(email);
 
   // Auto-close popup after 5 seconds
   setTimeout(closeLM, 5000);
