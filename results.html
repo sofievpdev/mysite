@@ -924,6 +924,125 @@
                 font-size: 1rem;
             }
         }
+
+/* Lead Magnet Popup */
+.lm-overlay {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(20, 30, 36, 0.6);
+backdrop-filter: blur(8px);
+z-index: 2000;
+align-items: center;
+justify-content: center;
+}
+.lm-overlay.active { display: flex; }
+.lm-popup {
+background: var(--white);
+border-radius: 16px;
+padding: 44px 40px;
+max-width: 480px;
+width: 90%;
+position: relative;
+box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+text-align: center;
+}
+.lm-close {
+position: absolute;
+top: 16px;
+right: 16px;
+background: none;
+border: 1px solid rgba(74,122,140,0.15);
+width: 32px;
+height: 32px;
+border-radius: 50%;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.1rem;
+color: var(--steel);
+transition: all 0.3s;
+}
+.lm-close:hover { border-color: var(--accent); color: var(--accent); }
+.lm-badge {
+display: inline-block;
+padding: 5px 14px;
+background: var(--gradient-warm);
+color: white;
+border-radius: 20px;
+font-size: 0.68rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+font-weight: 500;
+margin-bottom: 20px;
+}
+.lm-popup h3 {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.6rem;
+color: var(--dark);
+margin-bottom: 12px;
+line-height: 1.3;
+}
+.lm-popup p {
+font-size: 0.9rem;
+color: var(--steel);
+line-height: 1.7;
+margin-bottom: 24px;
+}
+.lm-form {
+display: flex;
+gap: 10px;
+}
+.lm-form input {
+flex: 1;
+padding: 14px 18px;
+border: 1.5px solid rgba(74,122,140,0.15);
+border-radius: 4px;
+font-family: 'Inter', sans-serif;
+font-size: 0.85rem;
+color: var(--dark);
+outline: none;
+transition: border-color 0.3s;
+}
+.lm-form input:focus { border-color: var(--accent); }
+.lm-form button {
+padding: 14px 24px;
+background: var(--gradient-1);
+color: white;
+border: none;
+font-family: 'Inter', sans-serif;
+font-size: 0.78rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+cursor: pointer;
+border-radius: 4px;
+font-weight: 500;
+white-space: nowrap;
+transition: all 0.3s;
+}
+.lm-form button:hover {
+box-shadow: 0 6px 24px var(--accent-glow);
+transform: translateY(-1px);
+}
+.lm-success { display: none; }
+.lm-success h3 { color: var(--accent); margin-bottom: 10px; }
+.lm-success p { margin-bottom: 20px; }
+.lm-success a {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+font-size: 0.9rem;
+transition: all 0.3s;
+}
+.lm-success a:hover { transform: translateX(4px); }
+@media (max-width: 600px) {
+.lm-popup { padding: 32px 24px; }
+.lm-form { flex-direction: column; }
+}
     </style>
 
     <!-- Structured Data: Reviews/Testimonials -->
@@ -1397,7 +1516,7 @@
                 <p class="section-subtitle" data-lang-ru="Запишитесь на диагностическую консультацию — и получите персональный разбор ваших анализов с конкретными рекомендациями." data-lang-en="Schedule a diagnostic consultation and get a personalized breakdown of your lab results with actionable recommendations." data-lang-cz="Zarezervujte diagnostickou konzultaci a obdržíte personalizovaný rozbor vašich výsledků testů s konkrétními doporučeními.">Запишитесь на диагностическую консультацию — и получите персональный разбор ваших анализов с конкретными рекомендациями.</p>
                 <div class="cta-buttons">
                     <a href="index.html#contact" class="btn-primary" data-lang-ru="Записаться на консультацию" data-lang-en="Schedule a Consultation" data-lang-cz="Zarezervujte konzultaci">Записаться на консультацию</a>
-                    <a href="#" class="cta-link" data-lang-ru="Или начните с бесплатного гайда →" data-lang-en="Or start with a free guide →" data-lang-cz="Nebo začněte bezplatným průvodcem →">Или начните с бесплатного гайда →</a>
+                    <a href="#" class="cta-link" id="guideCtaLink" onclick="openGuideOrPopup(event)" data-lang-ru="Или начните с бесплатного гайда →" data-lang-en="Or start with a free guide →" data-lang-cz="Nebo začněte bezplatným průvodcem →">Или начните с бесплатного гайда →</a>
                 </div>
             </div>
         </div>
@@ -1486,5 +1605,81 @@
             });
         });
     </script>
+
+<!-- LEAD MAGNET POPUP -->
+<div class="lm-overlay" id="lmOverlay">
+<div class="lm-popup">
+<button class="lm-close" onclick="closeLM()">&times;</button>
+<div id="lmFormState">
+<div class="lm-badge" data-lang-ru="Бесплатный гайд" data-lang-en="Free guide" data-lang-cz="Bezplatný průvodce">Бесплатный гайд</div>
+<h3 data-lang-ru="Усталость и&nbsp;вес после 30: 5&nbsp;анализов, которые покажут причину" data-lang-en="Fatigue &amp; weight after 30: 5&nbsp;tests that reveal the&nbsp;cause" data-lang-cz="Únava a&nbsp;váha po 30: 5&nbsp;analýz, které odhalí příčinu">Усталость и&nbsp;вес после 30: 5&nbsp;анализов, которые покажут причину</h3>
+<p data-lang-ru="Узнайте, какие маркеры действительно покажут причину — даже если стандартные анализы «в норме»." data-lang-en="Discover which markers actually reveal the cause — even when standard tests come back 'normal'." data-lang-cz="Zjistěte, které markery skutečně odhalí příčinu — i když standardní testy vycházejí «v normě».">Узнайте, какие маркеры действительно покажут причину — даже если стандартные анализы «в норме».</p>
+<div class="lm-form" id="lmForm">
+<input type="email" id="lmEmail" placeholder="Ваш email" required>
+<button onclick="submitLM()" data-lang-ru="Получить" data-lang-en="Get it" data-lang-cz="Získat">Получить</button>
+</div>
+</div>
+<div class="lm-success" id="lmSuccess">
+<h3 data-lang-ru="Готово!" data-lang-en="Done!" data-lang-cz="Hotovo!">Готово!</h3>
+<p data-lang-ru="Гайд открывается в новой вкладке." data-lang-en="The guide is opening in a new tab." data-lang-cz="Průvodce se otevírá v nové záložce.">Гайд открывается в новой вкладке.</p>
+<a href="guide-5-analizov.html" target="_blank">
+<span data-lang-ru="Открыть гайд ещё раз" data-lang-en="Open guide again" data-lang-cz="Otevřít průvodce znovu">Открыть гайд ещё раз</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</a>
+</div>
+</div>
+</div>
+
+<script>
+// Guide popup logic
+function openGuideOrPopup(e) {
+  if (e) e.preventDefault();
+  // If user already submitted email before — open guide directly
+  if (localStorage.getItem('lm_email')) {
+    window.open('guide-5-analizov.html', '_blank');
+    return;
+  }
+  // Otherwise show popup
+  document.getElementById('lmOverlay').classList.add('active');
+}
+
+function closeLM() {
+  document.getElementById('lmOverlay').classList.remove('active');
+}
+
+// Close on overlay click (not popup)
+document.getElementById('lmOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeLM();
+});
+
+function submitLM() {
+  var email = document.getElementById('lmEmail').value.trim();
+  if (!email || !email.includes('@')) {
+    document.getElementById('lmEmail').style.borderColor = '#c44';
+    return;
+  }
+
+  // Save email so next time guide opens directly
+  localStorage.setItem('lm_email', email);
+
+  // Open guide immediately
+  window.open('guide-5-analizov.html', '_blank');
+
+  // Show success state
+  document.getElementById('lmFormState').style.display = 'none';
+  document.getElementById('lmSuccess').style.display = 'block';
+
+  // Auto-close popup after 5 seconds
+  setTimeout(closeLM, 5000);
+}
+
+// Allow Enter key in email field
+document.getElementById('lmEmail').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') submitLM();
+});
+
+// Attach to the guide CTA link
+document.querySelector('.cta-link').addEventListener('click', openGuideOrPopup);
+</script>
 </body>
 </html>

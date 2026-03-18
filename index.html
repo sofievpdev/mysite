@@ -2456,6 +2456,9 @@ function submitLM() {
     return;
   }
 
+  // Save email so guide opens directly next time
+  localStorage.setItem('lm_email', email);
+
   // Open guide immediately
   window.open('guide-5-analizov.html', '_blank');
 
