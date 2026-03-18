@@ -2346,6 +2346,12 @@ if (entry.isIntersecting) entry.target.classList.add('visible');
 });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+// Fallback: force reveal on mobile if observer doesn't trigger
+if (window.innerWidth <= 768) {
+  setTimeout(function() {
+    document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
+  }, 500);
+}
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
 a.addEventListener('click', e => {

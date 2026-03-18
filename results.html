@@ -296,6 +296,18 @@
             transform: translateY(0);
         }
 
+        /* Fallback: ensure content is visible if JS fails or observer doesn't trigger */
+        @media (max-width: 768px) {
+            .testimonial-card.reveal,
+            .case-card.reveal,
+            .approach-card.reveal,
+            .metric-value-card.reveal,
+            .gallery-grid.reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
         /* Hero Section */
         .hero {
             padding: 180px 0 110px;
@@ -1580,6 +1592,16 @@ transition: all 0.3s;
         document.querySelectorAll('.reveal').forEach(element => {
             observer.observe(element);
         });
+
+        // Fallback: force reveal all elements after 3 seconds on mobile
+        // (in case IntersectionObserver doesn't trigger)
+        if (window.innerWidth <= 768) {
+            setTimeout(function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    el.classList.add('active');
+                });
+            }, 500);
+        }
 
         // Navigation scroll effect
         const nav = document.getElementById('nav');
