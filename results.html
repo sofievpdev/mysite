@@ -171,6 +171,66 @@
             background: var(--warm-gold);
         }
 
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+        .burger span {
+            width: 22px;
+            height: 1.5px;
+            background: var(--dark);
+            transition: all 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(250, 250, 248, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .mobile-menu a:hover { color: var(--accent); }
+        .mobile-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(74, 122, 140, 0.1);
+            transition: all 0.3s;
+        }
+        .mobile-close:hover { border-color: var(--accent); color: var(--accent); }
+
         .lang-switch {
             display: flex;
             gap: 10px;
@@ -853,6 +913,10 @@
                 display: none;
             }
 
+            .burger {
+                display: flex;
+            }
+
             .logo {
                 font-size: 1.1rem;
             }
@@ -1152,9 +1216,21 @@ transition: all 0.3s;
                     <button class="lang-btn" onclick="switchLang('en')">EN</button>
                     <button class="lang-btn" onclick="switchLang('cz')">CZ</button>
                 </div>
+                <button class="burger" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+        <a href="index.html#about" onclick="toggleMenu()" data-lang-ru="Обо мне" data-lang-en="About" data-lang-cz="O mně">Обо мне</a>
+        <a href="index.html#services" onclick="toggleMenu()" data-lang-ru="Услуги" data-lang-en="Services" data-lang-cz="Služby">Услуги</a>
+        <a href="results.html" onclick="toggleMenu()" data-lang-ru="Результаты" data-lang-en="Results" data-lang-cz="Výsledky">Результаты</a>
+        <a href="index.html#faq" onclick="toggleMenu()" data-lang-ru="FAQ" data-lang-en="FAQ" data-lang-cz="FAQ">FAQ</a>
+        <a href="index.html#contact" onclick="toggleMenu()" data-lang-ru="Контакт" data-lang-en="Contact" data-lang-cz="Kontakt">Контакт</a>
+    </div>
 
     <!-- 1. Hero Section -->
     <section class="hero">
@@ -1626,6 +1702,10 @@ transition: all 0.3s;
                 }
             });
         });
+    // Mobile menu
+    function toggleMenu() {
+        document.getElementById('mobileMenu').classList.toggle('open');
+    }
     </script>
 
 <!-- LEAD MAGNET POPUP -->
