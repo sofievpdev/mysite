@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sofievp.com/sitemap.xml
+
+# Block utility files
+Disallow: /newfile.json
+Disallow: /*.DS_Store
+Disallow: /index-v2.html
