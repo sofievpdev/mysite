@@ -1,0 +1,509 @@
+/* ===== SERVICE PAGE STYLES ===== */
+/* Supplements main.css — reuses nav, footer, btn, typography from main */
+
+/* Breadcrumbs */
+.breadcrumbs {
+  padding: 100px 0 0;
+  background: var(--white);
+}
+.breadcrumbs-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--steel);
+  letter-spacing: 0.04em;
+}
+.breadcrumbs-inner a {
+  color: var(--steel);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.breadcrumbs-inner a:hover {
+  color: var(--accent);
+}
+.breadcrumbs-inner .sep {
+  color: var(--pearl);
+  font-size: 0.65rem;
+}
+.breadcrumbs-inner .current {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Service Hero */
+.service-hero {
+  padding: 48px 0 60px;
+  background: var(--light-bg);
+  position: relative;
+  overflow: hidden;
+}
+.service-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(74, 122, 140, 0.06), transparent);
+  pointer-events: none;
+}
+.service-hero-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+.service-hero h1 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+.service-hero-sub {
+  font-size: 1.02rem;
+  color: var(--steel);
+  line-height: 1.8;
+  max-width: 600px;
+}
+.service-hero-price {
+  text-align: center;
+  padding: 28px 36px;
+  background: var(--white);
+  border-radius: 14px;
+  border: 1px solid rgba(74, 122, 140, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  min-width: 180px;
+}
+.service-hero-price .price-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  color: var(--dark);
+  line-height: 1;
+  font-weight: 400;
+}
+.service-hero-price .price-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-top: 6px;
+}
+
+/* Service Description */
+.service-description {
+  padding: 70px 0;
+  background: var(--white);
+}
+.service-description-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.service-description-text {
+  max-width: 800px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+.service-description-text p {
+  margin-bottom: 18px;
+}
+
+/* What's Included — Columns */
+.service-included {
+  padding: 70px 0;
+  background: var(--light-bg);
+}
+.service-included-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.service-included h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: var(--dark);
+}
+.service-included-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.service-included-col {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 32px;
+  border: 1px solid rgba(74, 122, 140, 0.06);
+  transition: all 0.3s;
+}
+.service-included-col:hover {
+  border-color: rgba(74, 122, 140, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+}
+.service-included-col h3 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.service-included-col h3::before {
+  content: '';
+  width: 20px;
+  height: 1.5px;
+  background: var(--gradient-warm);
+  flex-shrink: 0;
+}
+.service-included-col ul {
+  list-style: none;
+  padding: 0;
+}
+.service-included-col li {
+  font-size: 0.87rem;
+  color: var(--text);
+  padding: 8px 0 8px 22px;
+  position: relative;
+  line-height: 1.65;
+}
+.service-included-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gradient-1);
+}
+
+/* Stages layout */
+.service-stages-section {
+  padding: 70px 0;
+  background: var(--light-bg);
+}
+.service-stages-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.service-stages-inner h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: var(--dark);
+}
+.service-stage {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(74, 122, 140, 0.08);
+}
+.service-stage:last-child {
+  border-bottom: none;
+}
+.service-stage-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.service-stage-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gradient-1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+.service-stage-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+.service-stage-body {
+  padding-left: 50px;
+  font-size: 0.87rem;
+  color: var(--text);
+  line-height: 1.75;
+}
+.service-stage-body ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 6px;
+}
+.service-stage-body li {
+  padding: 4px 0 4px 20px;
+  position: relative;
+}
+.service-stage-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gradient-1);
+}
+
+/* Pricing Section */
+.service-pricing-section {
+  padding: 60px 0;
+  background: var(--white);
+  text-align: center;
+}
+.service-pricing-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.service-pricing-card {
+  display: inline-block;
+  padding: 40px 56px;
+  background: var(--light-bg);
+  border-radius: 16px;
+  border: 1px solid rgba(74, 122, 140, 0.08);
+  text-align: center;
+}
+.service-pricing-card .price-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  color: var(--dark);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.service-pricing-card .price-details {
+  font-size: 0.85rem;
+  color: var(--steel);
+  line-height: 1.7;
+}
+.service-pricing-card .price-note {
+  font-size: 0.78rem;
+  color: var(--steel);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* FAQ Section */
+.service-faq {
+  padding: 70px 0;
+  background: var(--light-bg);
+}
+.service-faq-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.service-faq h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  margin-bottom: 36px;
+  color: var(--dark);
+}
+.service-faq-item {
+  border-bottom: 1px solid rgba(74, 122, 140, 0.1);
+}
+.service-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  cursor: pointer;
+  gap: 20px;
+}
+.service-faq-question h4 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--dark);
+  transition: color 0.3s;
+  line-height: 1.5;
+}
+.service-faq-question:hover h4 {
+  color: var(--smoke-blue);
+}
+.service-faq-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 122, 140, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  color: var(--smoke-blue);
+}
+.service-faq-icon svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.4s;
+}
+.service-faq-item.open .service-faq-icon {
+  background: var(--gradient-1);
+  border-color: transparent;
+  color: white;
+}
+.service-faq-item.open .service-faq-icon svg {
+  transform: rotate(45deg);
+}
+.service-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.service-faq-item.open .service-faq-answer {
+  max-height: 600px;
+}
+.service-faq-answer-inner {
+  padding: 0 0 24px 0;
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+/* CTA Section */
+.service-cta {
+  padding: 80px 0;
+  background: var(--white);
+  text-align: center;
+}
+.service-cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.service-cta h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+.service-cta p {
+  font-size: 0.95rem;
+  color: var(--steel);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* Footer override for service pages — multi-column footer */
+.service-footer {
+  background: var(--dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 50px 0 0;
+}
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.2em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.footer-col p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+}
+.footer-col h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.footer-col a {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: block;
+  padding: 3px 0;
+}
+.footer-col a:hover {
+  color: var(--smoke-blue-light);
+}
+.footer-bottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  margin-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.footer-bottom p {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.06em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .breadcrumbs { padding-top: 84px; }
+  .breadcrumbs-inner { padding: 0 24px; }
+  .service-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 24px;
+  }
+  .service-hero-price {
+    justify-self: start;
+  }
+  .service-description-inner { padding: 0 24px; }
+  .service-included-inner { padding: 0 24px; }
+  .service-included-grid { grid-template-columns: 1fr; }
+  .service-stages-inner { padding: 0 24px; }
+  .service-pricing-inner { padding: 0 24px; }
+  .service-faq-inner { padding: 0 24px; }
+  .service-cta-inner { padding: 0 24px; }
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 28px;
+  }
+  .footer-bottom { padding: 20px 24px; }
+}
+
+@media (max-width: 600px) {
+  .service-hero { padding: 32px 0 44px; }
+  .service-hero h1 { font-size: 1.8rem; }
+  .service-description { padding: 50px 0; }
+  .service-included { padding: 50px 0; }
+  .service-stages-section { padding: 50px 0; }
+  .service-pricing-section { padding: 44px 0; }
+  .service-pricing-card { padding: 28px 32px; }
+  .service-pricing-card .price-main { font-size: 2.4rem; }
+  .service-faq { padding: 50px 0; }
+  .service-cta { padding: 56px 0; }
+}

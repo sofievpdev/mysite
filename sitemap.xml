@@ -74,6 +74,234 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/results.html" />
   </url>
 
+  <!-- Russian Blog -->
+  <url>
+    <loc>https://sofievp.com/ru/blog/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/" />
+  </url>
+
+  <!-- English Blog -->
+  <url>
+    <loc>https://sofievp.com/en/blog/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/" />
+  </url>
+
+  <!-- Czech Blog -->
+  <url>
+    <loc>https://sofievp.com/cz/blog/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/" />
+  </url>
+
+  <!-- Service Pages: Express Diagnostics -->
+  <url>
+    <loc>https://sofievp.com/ru/services/express-diagnostics.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/express-diagnostics.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/services/express-diagnostics.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/express-diagnostics.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/services/express-diagnostics.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/express-diagnostics.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/express-diagnostics.html" />
+  </url>
+
+  <!-- Service Pages: Nutrition Consultation -->
+  <url>
+    <loc>https://sofievp.com/ru/services/nutrition-consultation.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/nutrition-consultation.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/services/nutrition-consultation.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/nutrition-consultation.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/services/nutrition-consultation.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/nutrition-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/nutrition-consultation.html" />
+  </url>
+
+  <!-- Service Pages: Pregnancy Consultation -->
+  <url>
+    <loc>https://sofievp.com/ru/services/pregnancy-consultation.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/pregnancy-consultation.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/services/pregnancy-consultation.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/pregnancy-consultation.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/services/pregnancy-consultation.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/pregnancy-consultation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/pregnancy-consultation.html" />
+  </url>
+
+  <!-- Service Pages: Nutritional Support -->
+  <url>
+    <loc>https://sofievp.com/ru/services/nutritional-support.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/nutritional-support.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/services/nutritional-support.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/nutritional-support.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/services/nutritional-support.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/nutritional-support.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/nutritional-support.html" />
+  </url>
+
+  <!-- Service Pages: Health as a Project -->
+  <url>
+    <loc>https://sofievp.com/ru/services/health-as-a-project.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/health-as-a-project.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/services/health-as-a-project.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/health-as-a-project.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/services/health-as-a-project.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/health-as-a-project.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/health-as-a-project.html" />
+  </url>
+
+  <!-- Service Pages: CGM Monitoring -->
+  <url>
+    <loc>https://sofievp.com/ru/services/cgm-monitoring.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/cgm-monitoring.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/services/cgm-monitoring.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/cgm-monitoring.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/services/cgm-monitoring.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/services/cgm-monitoring.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/cgm-monitoring.html" />
+  </url>
+
   <!-- Free Guide (Russian only) -->
   <url>
     <loc>https://sofievp.com/guide-5-analizov.html</loc>
