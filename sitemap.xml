@@ -302,6 +302,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/cgm-monitoring.html" />
   </url>
 
+  <!-- Guide: Pregnancy & Breastfeeding Nutrition -->
+  <url>
+    <loc>https://sofievp.com/ru/guides/pregnancy-nutrition.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/pregnancy-nutrition.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/guides/pregnancy-nutrition.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/pregnancy-nutrition.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/guides/pregnancy-nutrition.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/pregnancy-nutrition.html" />
+  </url>
+
   <!-- Free Guide (Russian only) -->
   <url>
     <loc>https://sofievp.com/guide-5-analizov.html</loc>
