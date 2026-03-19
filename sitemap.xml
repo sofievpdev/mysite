@@ -1,28 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Russian Homepage -->
   <url>
-    <loc>https://sofievp.com/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://sofievp.com/ru/</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/" />
-    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/" />
   </url>
+
+  <!-- English Homepage -->
   <url>
-    <loc>https://sofievp.com/results.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <loc>https://sofievp.com/en/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/" />
+  </url>
+
+  <!-- Czech Homepage -->
+  <url>
+    <loc>https://sofievp.com/cz/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/" />
+  </url>
+
+  <!-- Russian Results -->
+  <url>
+    <loc>https://sofievp.com/ru/results.html</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/results.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/results.html" />
-    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/results.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/results.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/results.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/results.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/results.html" />
   </url>
+
+  <!-- English Results -->
+  <url>
+    <loc>https://sofievp.com/en/results.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/results.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/results.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/results.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/results.html" />
+  </url>
+
+  <!-- Czech Results -->
+  <url>
+    <loc>https://sofievp.com/cz/results.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/results.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/results.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/results.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/results.html" />
+  </url>
+
+  <!-- Free Guide (Russian only) -->
   <url>
     <loc>https://sofievp.com/guide-5-analizov.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
 </urlset>

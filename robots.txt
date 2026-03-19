@@ -7,3 +7,4 @@ Sitemap: https://sofievp.com/sitemap.xml
 Disallow: /newfile.json
 Disallow: /*.DS_Store
 Disallow: /index-v2.html
+Disallow: /generate-langs.py
