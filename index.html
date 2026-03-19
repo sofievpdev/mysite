@@ -68,7 +68,7 @@
 --gradient-1: linear-gradient(135deg, #3A6E82 0%, #2E7F94 50%, #4E8FA3 100%);
 --gradient-warm: linear-gradient(135deg, #B8943A 0%, #CDA84E 100%);
 }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
 font-family: 'Inter', -apple-system, sans-serif;
 color: var(--text);
@@ -2414,6 +2414,9 @@ document.querySelectorAll('[data-lang-' + lang + ']').forEach(el => {
 const val = el.getAttribute('data-lang-' + lang);
 if (val) el.innerHTML = val;
 });
+document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+el.placeholder = el.getAttribute('data-placeholder-' + lang);
+});
 document.documentElement.lang = lang === 'cz' ? 'cs' : lang;
 }
 // Navbar scroll
@@ -2497,7 +2500,7 @@ document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(
 <h3 data-lang-ru="Усталость и&nbsp;вес после 30: 5&nbsp;анализов, которые покажут причину" data-lang-en="Fatigue &amp; weight after 30: 5&nbsp;tests that reveal the&nbsp;cause" data-lang-cz="Únava a&nbsp;váha po 30: 5&nbsp;analýz, které odhalí příčinu">Усталость и&nbsp;вес после 30: 5&nbsp;анализов, которые покажут причину</h3>
 <p data-lang-ru="Узнайте, какие маркеры действительно покажут причину — даже если стандартные анализы «в норме»." data-lang-en="Discover which markers actually reveal the cause — even when standard tests come back 'normal'." data-lang-cz="Zjistěte, které markery skutečně odhalí příčinu — i když standardní testy vycházejí «v normě».">Узнайте, какие маркеры действительно покажут причину — даже если стандартные анализы «в норме».</p>
 <div class="lm-form" id="lmForm">
-<input type="email" id="lmEmail" placeholder="Ваш email" required>
+<input type="email" id="lmEmail" placeholder="Ваш email" data-placeholder-ru="Ваш email" data-placeholder-en="Your email" data-placeholder-cz="Váš email" required>
 <button onclick="submitLM()" data-lang-ru="Получить" data-lang-en="Get it" data-lang-cz="Získat">Получить</button>
 </div>
 </div>

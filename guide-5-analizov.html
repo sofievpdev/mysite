@@ -129,6 +129,29 @@
             font-weight: 600;
             position: relative;
             padding-bottom: 0.5rem;
+            text-decoration: none;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            color: var(--teal);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .back-btn:hover {
+            background: var(--teal);
+            color: white;
+            border-color: var(--teal);
         }
 
         .logo::after {
@@ -565,8 +588,11 @@
     <!-- ========== STICKY HEADER ========== -->
     <header class="sticky-header">
         <div class="header-container">
-            <div class="logo">Sofie Panfilova</div>
-            <button class="nav-button" id="tocBtn">☰ Содержание</button>
+            <a href="https://sofievp.com" class="logo">Sofie Panfilova</a>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <a href="https://sofievp.com" class="back-btn">← На сайт</a>
+                <button class="nav-button" id="tocBtn">☰ Содержание</button>
+            </div>
         </div>
     </header>
 
