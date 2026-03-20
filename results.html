@@ -8,12 +8,12 @@
 <link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/results.html">
 <link rel="alternate" hreflang="en" href="https://sofievp.com/en/results.html">
 <link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/results.html">
-<link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/results.html">
+<link rel="alternate" hreflang="x-default" href="https://sofievp.com/ru/results.html">
 <script>
 (function() {
   var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-  var dest = '/en/results.html';
-  if (lang.indexOf('ru') === 0) dest = '/ru/results.html';
+  var dest = '/ru/results.html';
+  if (lang.indexOf('en') === 0) dest = '/en/results.html';
   else if (lang.indexOf('cs') === 0 || lang.indexOf('cz') === 0) dest = '/cz/results.html';
   window.location.replace(dest);
 })();

@@ -25,12 +25,12 @@
 <link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/">
 <link rel="alternate" hreflang="en" href="https://sofievp.com/en/">
 <link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/">
-<link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://sofievp.com/ru/">
 <script>
 (function() {
   var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-  var dest = '/en/';
-  if (lang.indexOf('ru') === 0) dest = '/ru/';
+  var dest = '/ru/';
+  if (lang.indexOf('en') === 0) dest = '/en/';
   else if (lang.indexOf('cs') === 0 || lang.indexOf('cz') === 0) dest = '/cz/';
   window.location.replace(dest);
 })();
