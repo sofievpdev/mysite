@@ -62,6 +62,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/service.css">
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 <style>
 .guide-landing { max-width: 800px; margin: 0 auto; padding: 0 40px; }
 .guide-hero { padding: 120px 0 60px; text-align: center; }
@@ -234,10 +235,13 @@
 
   <div class="guide-cta-block" id="buy">
     <h2>Získat průvodce</h2>
-    <div class="price">€39</div>
-    <div class="note">PDF soubor • okamžité doručení emailem • přístup navždy</div>
-    <a class="btn-outline" href="https://t.me/sofievp" target="_blank"><span>Napsat na Telegram pro nákup</span></a>
-    <p style="font-size: 0.82rem; color: var(--steel); margin-top: 16px;">Nebo napište na <a href="mailto:sofia.panfilova@gmail.com" style="color: var(--accent);">sofia.panfilova@gmail.com</a></p>
+    <div class="price">990 Kč</div>
+    <div class="note">PDF soubor • okamžité doručení • přístup navždy</div>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1TDSYYETYuciiqIye0FhwTPe"
+      publishable-key="pk_live_51I8VFKETYuciiqIyNg5CnIU8HF0Gc1cU74ohmr2SR4YVrtXbgwPL1RB4Jmqyy5Q0h3FQR0K9mnPAR0H2hVZ4N7ri00q73wI94S"
+    ></stripe-buy-button>
+    <p style="font-size: 0.82rem; color: var(--steel); margin-top: 16px;">Bezpečná platba kartou, Apple Pay nebo Google Pay přes Stripe</p>
   </div>
 </div>
 
