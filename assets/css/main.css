@@ -528,6 +528,55 @@ margin-right: 16px;
 .btn-text:hover {
 color: var(--smoke-blue);
 }
+/* Service card action buttons layout */
+.service-actions {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+align-items: center;
+margin-top: 24px;
+}
+.service-actions .btn-text {
+border: 1px solid rgba(46,127,148,0.3);
+padding: 12px 28px;
+border-radius: 2px;
+margin-right: 0;
+font-size: 0.82rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+transition: all 0.3s;
+}
+.service-actions .btn-text:hover {
+border-color: var(--accent);
+background: rgba(46,127,148,0.06);
+color: var(--accent);
+}
+.service-actions .btn-outline {
+margin: 0;
+}
+.service-actions .btn-tg-link {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+color: var(--steel);
+text-decoration: none;
+font-size: 0.78rem;
+font-weight: 400;
+letter-spacing: 0.02em;
+opacity: 0.7;
+transition: all 0.3s;
+border: none;
+padding: 0;
+background: none;
+}
+.service-actions .btn-tg-link:hover {
+opacity: 1;
+color: var(--accent);
+}
+.service-actions .btn-tg-link svg {
+width: 14px;
+height: 14px;
+}
 /* ===== SECTIONS ===== */
 section { padding: 110px 0; }
 .section-eyebrow {
