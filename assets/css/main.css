@@ -576,7 +576,7 @@ background: linear-gradient(90deg, transparent, var(--smoke-blue), transparent);
 opacity: 0.15;
 }
 .about-grid {
-max-width: 720px;
+max-width: 900px;
 }
 .about-badges {
 display: flex;
@@ -620,7 +620,7 @@ height: 0;
 position: relative;
 border-radius: 14px;
 overflow: hidden;
-width: 260px;
+width: 220px;
 aspect-ratio: 3/4;
 margin: 0 0 12px 36px;
 float: right;

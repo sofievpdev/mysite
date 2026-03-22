@@ -430,6 +430,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/privacy-policy.html" />
   </url>
 
+  <!-- Guide: GLP-1 Nutrition -->
+  <url>
+    <loc>https://sofievp.com/ru/guides/glp1-nutrition.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/glp1-nutrition.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/guides/glp1-nutrition.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/glp1-nutrition.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/guides/glp1-nutrition.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/glp1-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/glp1-nutrition.html" />
+  </url>
+
   <!-- Free Guide (Russian only) -->
   <url>
     <loc>https://sofievp.com/guide-5-analizov.html</loc>
