@@ -537,13 +537,14 @@ align-items: center;
 margin-top: 24px;
 }
 .service-actions .btn-text {
-border: 1px solid rgba(46,127,148,0.3);
-padding: 12px 28px;
+border: 1.5px solid rgba(46,127,148,0.3);
+padding: 14px 32px;
 border-radius: 2px;
 margin-right: 0;
-font-size: 0.82rem;
-letter-spacing: 0.08em;
+font-size: 0.78rem;
+letter-spacing: 0.1em;
 text-transform: uppercase;
+font-weight: 500;
 transition: all 0.3s;
 }
 .service-actions .btn-text:hover {
