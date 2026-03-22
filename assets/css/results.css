@@ -1,3 +1,36 @@
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 100px 0 0;
+            background: var(--white);
+        }
+        .breadcrumbs-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            color: var(--steel);
+            letter-spacing: 0.04em;
+        }
+        .breadcrumbs-inner a {
+            color: var(--steel);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .breadcrumbs-inner a:hover {
+            color: var(--accent);
+        }
+        .breadcrumbs-inner .sep {
+            color: var(--pearl);
+            font-size: 0.65rem;
+        }
+        .breadcrumbs-inner .current {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
         :root {
             --steel: #4E5E66;
             --milk: #E6E5DD;
