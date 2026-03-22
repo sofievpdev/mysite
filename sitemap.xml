@@ -462,6 +462,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/glp1-nutrition.html" />
   </url>
 
+  <!-- Blog: Interview Radio Prague (Russian only) -->
+  <url>
+    <loc>https://sofievp.com/ru/blog/interview-radio-prague.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog: Video Nutrition Tips (Russian only) -->
+  <url>
+    <loc>https://sofievp.com/ru/blog/video-nutrition-tips.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Free Guide (Russian only) -->
   <url>
     <loc>https://sofievp.com/guide-5-analizov.html</loc>
