@@ -302,6 +302,70 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/services/cgm-monitoring.html" />
   </url>
 
+  <!-- Blog: Coffee During Pregnancy -->
+  <url>
+    <loc>https://sofievp.com/ru/blog/coffee-pregnancy.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/coffee-pregnancy.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/blog/coffee-pregnancy.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/coffee-pregnancy.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/blog/coffee-pregnancy.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/coffee-pregnancy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/coffee-pregnancy.html" />
+  </url>
+
+  <!-- Blog: HOMA-IR Insulin Resistance -->
+  <url>
+    <loc>https://sofievp.com/ru/blog/homa-ir-insulin-resistance.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/homa-ir-insulin-resistance.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/blog/homa-ir-insulin-resistance.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/homa-ir-insulin-resistance.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/blog/homa-ir-insulin-resistance.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/blog/homa-ir-insulin-resistance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/blog/homa-ir-insulin-resistance.html" />
+  </url>
+
   <!-- Guide: Pregnancy & Breastfeeding Nutrition -->
   <url>
     <loc>https://sofievp.com/ru/guides/pregnancy-nutrition.html</loc>
