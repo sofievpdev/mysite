@@ -147,6 +147,7 @@ border-radius: 20px;
 transition: all 0.3s;
 font-family: 'Inter', sans-serif;
 font-weight: 500;
+text-decoration: none;
 }
 .lang-btn.active {
 background: var(--gradient-1);
@@ -305,7 +306,13 @@ max-width: 480px;
 .hero-buttons {
 display: flex;
 gap: 16px;
-align-items: center;
+align-items: stretch;
+}
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+flex: 1;
+justify-content: center;
+text-align: center;
 }
 /* Hero visual — DNA helix-inspired */
 .hero-visual {
@@ -1236,12 +1243,76 @@ padding-left: 28px;
 }
 /* ===== FOOTER ===== */
 footer {
-padding: 32px 0;
+padding: 0;
 background: #161E22;
-text-align: center;
 font-size: 0.72rem;
 color: rgba(255,255,255,0.25);
 letter-spacing: 0.06em;
+}
+footer a {
+color: rgba(255,255,255,0.45);
+text-decoration: none;
+transition: color 0.3s;
+}
+footer a:hover {
+color: rgba(255,255,255,0.75);
+}
+.footer-inner {
+max-width: 1240px;
+margin: 0 auto;
+padding: 48px 40px 32px;
+display: grid;
+grid-template-columns: 1.2fr 1fr 1fr;
+gap: 40px;
+}
+.footer-col {
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+.footer-col h4 {
+font-family: 'Inter', sans-serif;
+font-size: 0.72rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: rgba(255,255,255,0.5);
+font-weight: 500;
+margin-bottom: 8px;
+}
+.footer-col p {
+font-size: 0.82rem;
+color: rgba(255,255,255,0.4);
+line-height: 1.6;
+}
+.footer-col a {
+font-size: 0.82rem;
+display: inline-block;
+padding: 2px 0;
+}
+.footer-logo {
+font-family: 'Cormorant Garamond', serif;
+font-size: 1.2rem;
+color: rgba(255,255,255,0.7);
+letter-spacing: 0.15em;
+}
+.footer-bottom {
+border-top: 1px solid rgba(255,255,255,0.06);
+text-align: center;
+padding: 20px 40px;
+}
+.footer-bottom p {
+font-size: 0.72rem;
+color: rgba(255,255,255,0.25);
+}
+@media (max-width: 600px) {
+.footer-inner {
+grid-template-columns: 1fr;
+gap: 28px;
+padding: 36px 24px 24px;
+}
+.footer-bottom {
+padding: 16px 24px;
+}
 }
 /* ===== ANIMATIONS ===== */
 .reveal {
