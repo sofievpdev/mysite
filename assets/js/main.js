@@ -127,14 +127,26 @@ document.querySelectorAll('[data-count]').forEach(function(el) { counterObserver
 // API endpoint for email subscription (Brevo key stored server-side)
 var API_URL = 'https://sofievp-api.onrender.com';
 
+// Guide path and email template based on page language
+var pageLang = document.documentElement.lang || 'ru';
+var guidePath, guideTemplateId;
+
+if (pageLang === 'cs') {
+  guidePath = '/cz/guides/5-analyzu.html';
+  guideTemplateId = 2;  // Czech Brevo template — update ID after creating
+} else {
+  guidePath = '/guide-5-analizov.html';
+  guideTemplateId = 1;  // Russian Brevo template
+}
+
 // Subscribe: add contact to list + send guide email
 function brevoSubmit(email) {
-  var guideLink = window.location.origin + '/guide-5-analizov.html';
+  var guideLink = window.location.origin + guidePath;
 
   fetch(API_URL + '/subscribe', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email, guide_link: guideLink })
+    body: JSON.stringify({ email: email, guide_link: guideLink, template_id: guideTemplateId })
   }).catch(function(err) {
     console.log('Subscribe error:', err);
   });
@@ -186,7 +198,7 @@ function submitLM() {
   localStorage.setItem('lm_email', email);
 
   // Open guide immediately
-  window.open('/guide-5-analizov.html', '_blank');
+  window.open(guidePath, '_blank');
 
   // Show success state
   document.getElementById('lmFormState').style.display = 'none';
@@ -216,7 +228,7 @@ function openGuideOrPopup(e) {
   if (e) e.preventDefault();
   // If user already submitted email before - open guide directly
   if (localStorage.getItem('lm_email')) {
-    window.open('/guide-5-analizov.html', '_blank');
+    window.open(guidePath, '_blank');
     return;
   }
   // Otherwise show popup

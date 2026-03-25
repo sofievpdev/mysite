@@ -72,6 +72,7 @@ var server = http.createServer(function(req, res) {
         var data = JSON.parse(body);
         var email = data.email;
         var guideLink = data.guide_link;
+        var templateId = parseInt(data.template_id) || BREVO_TEMPLATE_ID;
 
         if (!email || !email.includes('@')) {
           return sendJSON(res, 400, { error: 'Invalid email' });
@@ -88,13 +89,13 @@ var server = http.createServer(function(req, res) {
           console.log('Contact error:', err);
         });
 
-        // 2. Send guide email via template
+        // 2. Send guide email via template (language-specific)
         brevoRequest('/smtp/email', {
-          templateId: BREVO_TEMPLATE_ID,
+          templateId: templateId,
           to: [{ email: email }],
           params: { guide_link: guideLink || 'https://sofievp.com/guide-5-analizov.html' }
         }).then(function(emailResult) {
-          console.log('Email sent to:', email, emailResult);
+          console.log('Email sent to:', email, 'template:', templateId, emailResult);
         }).catch(function(err) {
           console.log('Email error:', err);
         });
