@@ -146,7 +146,7 @@ function brevoSubmit(email) {
   fetch(API_URL + '/subscribe', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email, guide_link: guideLink, template_id: guideTemplateId })
+    body: JSON.stringify({ email: email, guide_link: guideLink, template_id: guideTemplateId, lang: pageLang })
   }).catch(function(err) {
     console.log('Subscribe error:', err);
   });

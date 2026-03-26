@@ -73,15 +73,17 @@ var server = http.createServer(function(req, res) {
         var email = data.email;
         var guideLink = data.guide_link;
         var templateId = parseInt(data.template_id) || BREVO_TEMPLATE_ID;
+        var lang = data.lang || 'ru';
 
         if (!email || !email.includes('@')) {
           return sendJSON(res, 400, { error: 'Invalid email' });
         }
 
-        // 1. Add contact to Brevo list
+        // 1. Add contact to Brevo list with language attribute
         brevoRequest('/contacts', {
           email: email,
           listIds: [BREVO_LIST_ID],
+          attributes: { LANGUAGE: lang },
           updateEnabled: true
         }).then(function(contactResult) {
           console.log('Contact added:', email, contactResult);
