@@ -63,6 +63,20 @@ var server = http.createServer(function(req, res) {
     return sendJSON(res, 200, { status: 'ok' });
   }
 
+  // One-time setup: create LANGUAGE attribute in Brevo
+  if (req.url === '/setup-language-attr' && req.method === 'POST') {
+    brevoRequest('/contacts/attributes/normal/LANGUAGE', {
+      type: 'text'
+    }).then(function(result) {
+      console.log('Attribute created:', result);
+      sendJSON(res, 200, { success: true, result: result });
+    }).catch(function(err) {
+      console.log('Attribute error:', err);
+      sendJSON(res, 500, { error: err.message });
+    });
+    return;
+  }
+
   // Subscribe endpoint
   if (req.url === '/subscribe' && req.method === 'POST') {
     var body = '';
