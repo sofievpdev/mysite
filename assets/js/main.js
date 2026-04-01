@@ -295,14 +295,7 @@ function openGuideOrPopup(e, guideKey) {
   var key = guideKey || defaultGuideKey;
   var guideInfo = getGuideInfo(key);
 
-  // If user already submitted email — open guide directly
-  if (localStorage.getItem('lm_email')) {
-    window.open(guideInfo.path, '_blank');
-    // Still send email for this guide
-    brevoSubmit(localStorage.getItem('lm_email'), guideInfo.path, guideInfo.templateId);
-    return;
-  }
-  // Otherwise show popup for this guide
+  // Always show popup — guide opens only after email submission
   var overlay = document.getElementById('lmOverlay');
   if (overlay) {
     overlay.dataset.guide = key;
@@ -310,6 +303,10 @@ function openGuideOrPopup(e, guideKey) {
     // Reset form state
     document.getElementById('lmFormState').style.display = 'block';
     document.getElementById('lmSuccess').style.display = 'none';
+    // Pre-fill email if already known
+    var savedEmail = localStorage.getItem('lm_email');
+    var emailField = document.getElementById('lmEmail');
+    if (savedEmail && emailField) emailField.value = savedEmail;
     overlay.classList.add('active');
   }
 }
