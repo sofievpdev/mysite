@@ -127,26 +127,71 @@ document.querySelectorAll('[data-count]').forEach(function(el) { counterObserver
 // API endpoint for email subscription (Brevo key stored server-side)
 var API_URL = 'https://sofievp-api.onrender.com';
 
-// Guide path and email template based on page language
+// Guide configuration: multiple guides per language
 var pageLang = document.documentElement.lang || 'ru';
-var guidePath, guideTemplateId;
+var guideConfig = {
+  '5-tests': {
+    cs: { path: '/cz/guides/5-analyzu.html', templateId: 2 },
+    ru: { path: '/guide-5-analizov.html', templateId: 1 },
+    en: { path: '/guide-5-analizov.html', templateId: 1 }
+  },
+  'omega3': {
+    cs: { path: '/cz/guides/omega3.html', templateId: 4 },
+    ru: { path: '/ru/guides/omega3.html', templateId: 3 },
+    en: { path: '/en/guides/omega3.html', templateId: 5 }
+  }
+};
+var defaultGuideKey = '5-tests';
 
-if (pageLang === 'cs') {
-  guidePath = '/cz/guides/5-analyzu.html';
-  guideTemplateId = 2;  // Czech Brevo template — update ID after creating
-} else {
-  guidePath = '/guide-5-analizov.html';
-  guideTemplateId = 1;  // Russian Brevo template
+function getGuideInfo(guideKey) {
+  var langKey = (pageLang === 'cs') ? 'cs' : (pageLang === 'en' ? 'en' : 'ru');
+  var config = guideConfig[guideKey || defaultGuideKey];
+  if (!config || !config[langKey]) config = guideConfig[defaultGuideKey];
+  return config[langKey];
+}
+
+// Default guide for backward compatibility
+var defaultGuide = getGuideInfo(defaultGuideKey);
+var guidePath = defaultGuide.path;
+var guideTemplateId = defaultGuide.templateId;
+
+// Popup content per guide per language
+var popupContent = {
+  '5-tests': {
+    cs: { badge: 'Bezplatný průvodce', title: 'Únava a váha po 30: 5 analýz, které odhalí příčinu', desc: 'Zjistěte, které markery skutečně odhalí příčinu — i když standardní testy vycházejí «v normě».' },
+    ru: { badge: 'Бесплатный гайд', title: 'Усталость и вес после 30: 5 анализов, которые покажут причину', desc: 'Узнайте, какие маркеры действительно покажут причину — даже когда стандартные анализы «в норме».' },
+    en: { badge: 'Free guide', title: 'Fatigue & weight after 30: 5 tests that reveal the cause', desc: 'Discover which markers truly reveal the cause — even when standard tests come back "normal".' }
+  },
+  'omega3': {
+    cs: { badge: 'Zdarma', title: 'Checklist: Jak vybrat kvalitní Omega-3', desc: 'Na co se dívat při výběru, srovnání doplňků a doporučení od nutriční terapeutky.' },
+    ru: { badge: 'Бесплатно', title: 'Чек-лист: Как выбрать качественную Омега-3', desc: 'На что обращать внимание при выборе, сравнение добавок и рекомендации нутрициолога.' },
+    en: { badge: 'Free', title: 'Checklist: How to choose quality Omega-3', desc: 'What to look for when choosing, supplement comparison and dietitian recommendations.' }
+  }
+};
+
+function updatePopupContent(guideKey) {
+  var langKey = (pageLang === 'cs') ? 'cs' : (pageLang === 'en' ? 'en' : 'ru');
+  var data = popupContent[guideKey] && popupContent[guideKey][langKey];
+  if (!data) return;
+  var badge = document.querySelector('#lmFormState .lm-badge');
+  var title = document.querySelector('#lmFormState h3');
+  var desc = document.querySelector('#lmFormState > p, #lmFormState .lm-form ~ p');
+  if (!desc) desc = document.querySelector('#lmFormState p');
+  if (badge) badge.textContent = data.badge;
+  if (title) title.textContent = data.title;
+  if (desc && !desc.closest('.lm-form')) desc.textContent = data.desc;
 }
 
 // Subscribe: add contact to list + send guide email
-function brevoSubmit(email) {
-  var guideLink = window.location.origin + guidePath;
+function brevoSubmit(email, customPath, customTemplateId) {
+  var usePath = customPath || guidePath;
+  var useTemplateId = customTemplateId || guideTemplateId;
+  var guideLink = window.location.origin + usePath;
 
   fetch(API_URL + '/subscribe', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email, guide_link: guideLink, template_id: guideTemplateId, lang: pageLang })
+    body: JSON.stringify({ email: email, guide_link: guideLink, template_id: useTemplateId, lang: pageLang })
   }).catch(function(err) {
     console.log('Subscribe error:', err);
   });
@@ -154,13 +199,17 @@ function brevoSubmit(email) {
 
 // Show popup
 var lmShown = false;
-function showLM() {
+function showLM(guideKey) {
   if (lmShown || sessionStorage.getItem('lm_closed')) return;
-  // Don't show if user already submitted email
   if (localStorage.getItem('lm_email')) return;
   lmShown = true;
+  var key = guideKey || defaultGuideKey;
   var overlay = document.getElementById('lmOverlay');
-  if (overlay) overlay.classList.add('active');
+  if (overlay) {
+    overlay.dataset.guide = key;
+    updatePopupContent(key);
+    overlay.classList.add('active');
+  }
 }
 
 // Timer: show after 10s
@@ -173,7 +222,18 @@ document.addEventListener('mouseout', function(e) {
 
 function closeLM() {
   var overlay = document.getElementById('lmOverlay');
-  if (overlay) overlay.classList.remove('active');
+  if (overlay) {
+    overlay.classList.remove('active');
+    // Reset to default state after close
+    setTimeout(function() {
+      overlay.dataset.guide = defaultGuideKey;
+      document.getElementById('lmFormState').style.display = 'block';
+      document.getElementById('lmSuccess').style.display = 'none';
+      document.getElementById('lmEmail').value = '';
+      document.getElementById('lmEmail').style.borderColor = '';
+      updatePopupContent(defaultGuideKey);
+    }, 300);
+  }
   sessionStorage.setItem('lm_closed', '1');
 }
 
@@ -194,22 +254,28 @@ function submitLM() {
     return;
   }
 
-  // Save email so guide opens directly next time
   localStorage.setItem('lm_email', email);
 
+  // Determine active guide
+  var overlay = document.getElementById('lmOverlay');
+  var activeKey = (overlay && overlay.dataset.guide) || defaultGuideKey;
+  var guideInfo = getGuideInfo(activeKey);
+
   // Open guide immediately
-  window.open(guidePath, '_blank');
+  window.open(guideInfo.path, '_blank');
 
   // Show success state
   document.getElementById('lmFormState').style.display = 'none';
   document.getElementById('lmSuccess').style.display = 'block';
 
-  // Send to Brevo: add to list + send guide email
-  brevoSubmit(email);
+  // Update success link to correct guide
+  var successLink = document.querySelector('#lmSuccess a');
+  if (successLink) successLink.href = guideInfo.path;
+
+  // Send to Brevo
+  brevoSubmit(email, guideInfo.path, guideInfo.templateId);
 
   sessionStorage.setItem('lm_closed', '1');
-
-  // Auto-close popup after 5 seconds
   setTimeout(closeLM, 5000);
 }
 
@@ -223,17 +289,29 @@ function submitLM() {
   }
 })();
 
-// Guide popup logic for results page CTA
-function openGuideOrPopup(e) {
+// Guide popup logic for CTA buttons
+function openGuideOrPopup(e, guideKey) {
   if (e) e.preventDefault();
-  // If user already submitted email before - open guide directly
+  var key = guideKey || defaultGuideKey;
+  var guideInfo = getGuideInfo(key);
+
+  // If user already submitted email — open guide directly
   if (localStorage.getItem('lm_email')) {
-    window.open(guidePath, '_blank');
+    window.open(guideInfo.path, '_blank');
+    // Still send email for this guide
+    brevoSubmit(localStorage.getItem('lm_email'), guideInfo.path, guideInfo.templateId);
     return;
   }
-  // Otherwise show popup
+  // Otherwise show popup for this guide
   var overlay = document.getElementById('lmOverlay');
-  if (overlay) overlay.classList.add('active');
+  if (overlay) {
+    overlay.dataset.guide = key;
+    updatePopupContent(key);
+    // Reset form state
+    document.getElementById('lmFormState').style.display = 'block';
+    document.getElementById('lmSuccess').style.display = 'none';
+    overlay.classList.add('active');
+  }
 }
 
 // Attach to the guide CTA link if present

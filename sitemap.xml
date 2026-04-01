@@ -5,7 +5,7 @@
   <!-- Russian Homepage -->
   <url>
     <loc>https://sofievp.com/ru/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/" />
@@ -17,7 +17,7 @@
   <!-- English Homepage -->
   <url>
     <loc>https://sofievp.com/en/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/" />
@@ -29,7 +29,7 @@
   <!-- Czech Homepage -->
   <url>
     <loc>https://sofievp.com/cz/</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/" />
@@ -496,6 +496,26 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/guide-5-analizov.html" />
     <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/5-analyzu.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/guide-5-analizov.html" />
+  </url>
+
+  <!-- Free Guide: Omega-3 Checklist (Russian + Czech) -->
+  <url>
+    <loc>https://sofievp.com/ru/guides/omega3.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/ru/guides/omega3.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/cz/guides/omega3.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/ru/guides/omega3.html" />
   </url>
 
 </urlset>

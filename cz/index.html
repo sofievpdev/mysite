@@ -323,6 +323,7 @@ Sofie Panfilova
 <li><a href="#about">O mně</a></li>
 <li><a href="#symptoms">Příznaky</a></li>
 <li><a href="#services">Služby</a></li>
+<li><a href="#products">Produkty</a></li>
 <li><a href="/cz/results.html">Výsledky</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="/cz/blog/">Blog</a></li>
@@ -344,6 +345,7 @@ Sofie Panfilova
 <a href="#about" onclick="toggleMenu()">O mně</a>
 <a href="#symptoms" onclick="toggleMenu()">Příznaky</a>
 <a href="#services" onclick="toggleMenu()">Služby</a>
+<a href="#products" onclick="toggleMenu()">Produkty</a>
 <a href="/cz/results.html" onclick="toggleMenu()">Výsledky</a>
 <a href="#faq" onclick="toggleMenu()">FAQ</a>
 <a href="/cz/blog/" onclick="toggleMenu()">Blog</a>
@@ -811,13 +813,48 @@ Proč sledovat glukózu?
 </div>
 </div>
 </div>
-<!-- DIGITAL GUIDES -->
-<div style="margin-top: 60px;">
-<div class="section-eyebrow">Digitální průvodce</div>
-<h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 12px;">Samostatné <em>průvodce</em> výživou</h3>
-<p class="section-desc" style="margin-bottom: 36px;">Strukturovaní průvodci pro ty, kdo chtějí začít sami.</p>
+</div>
+</div>
+</section>
+<!-- PRODUCTS -->
+<section class="products" id="products" style="padding: 100px 0 60px;">
+<div class="container">
+<div class="section-eyebrow">Produkty</div>
+<h2 class="section-title reveal">Digitální <em>průvodce</em></h2>
+<p class="section-desc reveal">Strukturovaní průvodci pro ty, kdo chtějí začít sami.</p>
+<!-- FREE GUIDES -->
+<div style="margin-top: 40px;">
+<h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 20px;">Zdarma</h3>
 <div class="guides-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-<!-- Guide 1: Pregnancy & BF -->
+<!-- Free: 5 Tests -->
+<div style="padding: 32px; background: var(--light-bg); border-radius: 14px; border: 1px solid rgba(74,122,140,0.08); position: relative;">
+<div style="position: absolute; top: 16px; right: 16px; padding: 4px 12px; background: linear-gradient(135deg, #C49A44, #D4AF61); color: white; border-radius: 16px; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;">Zdarma</div>
+<div style="font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">PDF průvodce</div>
+<h4 style="font-size: 1.2rem; margin-bottom: 10px;">Únava a váha po 30: 5 vyšetření</h4>
+<p style="font-size: 0.88rem; color: var(--steel); line-height: 1.7; margin-bottom: 20px;">Zjistěte, které krevní testy skutečně odhalí příčinu únavy a přibírání na váze.</p>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--accent); font-weight: 500;">Zdarma</span>
+<a class="btn-outline" href="#" onclick="openGuideOrPopup(event, '5-tests')">Získat</a>
+</div>
+</div>
+<!-- Free: Omega-3 -->
+<div style="padding: 32px; background: var(--light-bg); border-radius: 14px; border: 1px solid rgba(74,122,140,0.08); position: relative;">
+<div style="position: absolute; top: 16px; right: 16px; padding: 4px 12px; background: linear-gradient(135deg, #C49A44, #D4AF61); color: white; border-radius: 16px; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;">Zdarma</div>
+<div style="font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">PDF průvodce</div>
+<h4 style="font-size: 1.2rem; margin-bottom: 10px;">Checklist: Jak vybrat kvalitní Omega-3</h4>
+<p style="font-size: 0.88rem; color: var(--steel); line-height: 1.7; margin-bottom: 20px;">Na co se dívat při výběru, srovnání doplňků a doporučení od nutriční terapeutky.</p>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--accent); font-weight: 500;">Zdarma</span>
+<a class="btn-outline" href="#" onclick="openGuideOrPopup(event, 'omega3')">Získat</a>
+</div>
+</div>
+</div>
+</div>
+<!-- PAID GUIDES -->
+<div style="margin-top: 48px;">
+<h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 20px;">Placené průvodce</h3>
+<div class="guides-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+<!-- Paid: Pregnancy -->
 <div style="padding: 32px; background: var(--light-bg); border-radius: 14px; border: 1px solid rgba(74,122,140,0.08);">
 <div style="font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">PDF průvodce</div>
 <h4 style="font-size: 1.2rem; margin-bottom: 10px;">Výživa v těhotenství a při kojení</h4>
@@ -827,7 +864,7 @@ Proč sledovat glukózu?
 <a class="btn-outline" href="/cz/guides/pregnancy-nutrition.html">Více informací</a>
 </div>
 </div>
-<!-- Guide 2: GLP-1 -->
+<!-- Paid: GLP-1 -->
 <div style="padding: 32px; background: var(--light-bg); border-radius: 14px; border: 1px solid rgba(74,122,140,0.08);">
 <div style="font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">PDF průvodce</div>
 <h4 style="font-size: 1.2rem; margin-bottom: 10px;">Výživa na GLP-1 (Ozempic, Wegovy, Mounjaro)</h4>
@@ -835,7 +872,6 @@ Proč sledovat glukózu?
 <div style="display: flex; align-items: center; justify-content: space-between;">
 <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--dark);">€15</span>
 <a class="btn-outline" href="/cz/guides/glp1-nutrition.html">Více informací</a>
-</div>
 </div>
 </div>
 </div>

@@ -323,6 +323,7 @@ Sofie Panfilova
 <li><a href="#about">Обо мне</a></li>
 <li><a href="#symptoms">Симптомы</a></li>
 <li><a href="#services">Услуги</a></li>
+<li><a href="#products">Продукты</a></li>
 <li><a href="/ru/results.html">Результаты</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="/ru/blog/">Блог</a></li>
@@ -344,6 +345,7 @@ Sofie Panfilova
 <a href="#about" onclick="toggleMenu()">Обо мне</a>
 <a href="#symptoms" onclick="toggleMenu()">Симптомы</a>
 <a href="#services" onclick="toggleMenu()">Услуги</a>
+<a href="#products" onclick="toggleMenu()">Продукты</a>
 <a href="/ru/results.html" onclick="toggleMenu()">Результаты</a>
 <a href="#faq" onclick="toggleMenu()">FAQ</a>
 <a href="/ru/blog/" onclick="toggleMenu()">Блог</a>
@@ -811,13 +813,48 @@ Sofie Panfilova
 </div>
 </div>
 </div>
-<!-- DIGITAL GUIDES -->
-<div style="margin-top: 60px;">
-<div class="section-eyebrow">Цифровые гайды</div>
-<h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 12px;">Самостоятельные <em>гайды</em> по питанию</h3>
-<p class="section-desc" style="margin-bottom: 36px;">Структурированные руководства для тех, кто хочет начать самостоятельно.</p>
+</div>
+</div>
+</section>
+<!-- PRODUCTS -->
+<section class="products" id="products" style="padding: 100px 0 60px;">
+<div class="container">
+<div class="section-eyebrow">Продукты</div>
+<h2 class="section-title reveal">Цифровые <em>гайды</em></h2>
+<p class="section-desc reveal">Структурированные руководства для тех, кто хочет начать самостоятельно.</p>
+<!-- FREE GUIDES -->
+<div style="margin-top: 40px;">
+<h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 20px;">Бесплатно</h3>
 <div class="guides-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-<!-- Guide 1: Pregnancy & BF -->
+<!-- Free: 5 Tests -->
+<div style="padding: 32px; background: var(--light-bg); border-radius: 14px; border: 1px solid rgba(74,122,140,0.08); position: relative;">
+<div style="position: absolute; top: 16px; right: 16px; padding: 4px 12px; background: linear-gradient(135deg, #C49A44, #D4AF61); color: white; border-radius: 16px; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;">Бесплатно</div>
+<div style="font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">PDF-гайд</div>
+<h4 style="font-size: 1.2rem; margin-bottom: 10px;">Усталость и вес после 30: 5 анализов</h4>
+<p style="font-size: 0.88rem; color: var(--steel); line-height: 1.7; margin-bottom: 20px;">Узнайте, какие анализы крови действительно покажут причину усталости и набора веса.</p>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--accent); font-weight: 500;">Бесплатно</span>
+<a class="btn-outline" href="#" onclick="openGuideOrPopup(event, '5-tests')">Получить</a>
+</div>
+</div>
+<!-- Free: Omega-3 -->
+<div style="padding: 32px; background: var(--light-bg); border-radius: 14px; border: 1px solid rgba(74,122,140,0.08); position: relative;">
+<div style="position: absolute; top: 16px; right: 16px; padding: 4px 12px; background: linear-gradient(135deg, #C49A44, #D4AF61); color: white; border-radius: 16px; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;">Бесплатно</div>
+<div style="font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">PDF-гайд</div>
+<h4 style="font-size: 1.2rem; margin-bottom: 10px;">Чек-лист: Как выбрать качественную Омега-3</h4>
+<p style="font-size: 0.88rem; color: var(--steel); line-height: 1.7; margin-bottom: 20px;">На что обращать внимание при выборе, сравнение добавок и рекомендации нутрициолога.</p>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--accent); font-weight: 500;">Бесплатно</span>
+<a class="btn-outline" href="#" onclick="openGuideOrPopup(event, 'omega3')">Получить</a>
+</div>
+</div>
+</div>
+</div>
+<!-- PAID GUIDES -->
+<div style="margin-top: 48px;">
+<h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 20px;">Платные гайды</h3>
+<div class="guides-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+<!-- Paid: Pregnancy -->
 <div style="padding: 32px; background: var(--light-bg); border-radius: 14px; border: 1px solid rgba(74,122,140,0.08);">
 <div style="font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">PDF-гайд</div>
 <h4 style="font-size: 1.2rem; margin-bottom: 10px;">Питание при беременности и грудном вскармливании</h4>
@@ -827,7 +864,7 @@ Sofie Panfilova
 <a class="btn-outline" href="/ru/guides/pregnancy-nutrition.html">Подробнее</a>
 </div>
 </div>
-<!-- Guide 2: GLP-1 -->
+<!-- Paid: GLP-1 -->
 <div style="padding: 32px; background: var(--light-bg); border-radius: 14px; border: 1px solid rgba(74,122,140,0.08);">
 <div style="font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; font-weight: 600;">PDF-гайд</div>
 <h4 style="font-size: 1.2rem; margin-bottom: 10px;">Питание на GLP-1 (Ozempic, Wegovy, Mounjaro)</h4>
@@ -835,7 +872,6 @@ Sofie Panfilova
 <div style="display: flex; align-items: center; justify-content: space-between;">
 <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--dark);">€15</span>
 <a class="btn-outline" href="/ru/guides/glp1-nutrition.html">Подробнее</a>
-</div>
 </div>
 </div>
 </div>
