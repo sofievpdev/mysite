@@ -133,7 +133,7 @@ var guideConfig = {
   '5-tests': {
     cs: { path: '/cz/guides/5-analyzu.html', templateId: 2 },
     ru: { path: '/guide-5-analizov.html', templateId: 1 },
-    en: { path: '/guide-5-analizov.html', templateId: 1 }
+    en: { path: '/en/guides/5-tests.html', templateId: 1 }
   },
   'omega3': {
     cs: { path: '/cz/guides/omega3.html', templateId: 4 },

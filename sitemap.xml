@@ -478,44 +478,80 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Free Guide: 5 Tests (Russian + Czech) -->
+  <!-- Free Guide: 5 Tests (Russian + Czech + English) -->
   <url>
     <loc>https://sofievp.com/guide-5-analizov.html</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/guide-5-analizov.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/5-tests.html" />
     <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/5-analyzu.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/guide-5-analizov.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/5-tests.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/guides/5-tests.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/guide-5-analizov.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/5-tests.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/5-analyzu.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/5-tests.html" />
   </url>
   <url>
     <loc>https://sofievp.com/cz/guides/5-analyzu.html</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/guide-5-analizov.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/5-tests.html" />
     <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/5-analyzu.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/guide-5-analizov.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/5-tests.html" />
   </url>
 
-  <!-- Free Guide: Omega-3 Checklist (Russian + Czech) -->
+  <!-- Free Guide: Omega-3 Checklist (Russian + Czech + English) -->
   <url>
     <loc>https://sofievp.com/ru/guides/omega3.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/omega3.html" />
     <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/omega3.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/ru/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/omega3.html" />
+  </url>
+  <url>
+    <loc>https://sofievp.com/en/guides/omega3.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/omega3.html" />
   </url>
   <url>
     <loc>https://sofievp.com/cz/guides/omega3.html</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/omega3.html" />
     <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/omega3.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/ru/guides/omega3.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/omega3.html" />
+  </url>
+
+  <!-- Free Guide: Pregnancy Nutrition (English full guide) -->
+  <url>
+    <loc>https://sofievp.com/en/guides/pregnancy-nutrition-guide.html</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sofievp.com/en/guides/pregnancy-nutrition-guide.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/pregnancy-nutrition.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/pregnancy-nutrition-guide.html" />
   </url>
 
 </urlset>
