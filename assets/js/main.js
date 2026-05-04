@@ -142,7 +142,7 @@ var guideConfig = {
   },
   'pregnancy': {
     cs: { path: '/assets/guides/pregnancy-nutrition-guide.pdf', templateId: 8 },
-    ru: { path: '/assets/guides/pregnancy-nutrition-guide.pdf', templateId: 6 },
+    ru: { path: '/ru/guides/pregnancy-nutrition-guide.html', templateId: 6 },
     en: { path: '/en/guides/pregnancy-nutrition-guide.html', templateId: 7 }
   }
 };
