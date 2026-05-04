@@ -139,6 +139,11 @@ var guideConfig = {
     cs: { path: '/cz/guides/omega3.html', templateId: 4 },
     ru: { path: '/ru/guides/omega3.html', templateId: 3 },
     en: { path: '/en/guides/omega3.html', templateId: 5 }
+  },
+  'pregnancy': {
+    cs: { path: '/assets/guides/pregnancy-nutrition-guide.pdf', templateId: 8 },
+    ru: { path: '/assets/guides/pregnancy-nutrition-guide.pdf', templateId: 6 },
+    en: { path: '/assets/guides/pregnancy-nutrition-guide.pdf', templateId: 7 }
   }
 };
 var defaultGuideKey = '5-tests';
@@ -166,6 +171,11 @@ var popupContent = {
     cs: { badge: 'Zdarma', title: 'Checklist: Jak vybrat kvalitní Omega-3', desc: 'Na co se dívat při výběru, srovnání doplňků a doporučení od nutriční terapeutky.' },
     ru: { badge: 'Бесплатно', title: 'Чек-лист: Как выбрать качественную Омега-3', desc: 'На что обращать внимание при выборе, сравнение добавок и рекомендации нутрициолога.' },
     en: { badge: 'Free', title: 'Checklist: How to choose quality Omega-3', desc: 'What to look for when choosing, supplement comparison and dietitian recommendations.' }
+  },
+  'pregnancy': {
+    cs: { badge: 'Bezplatný průvodce', title: 'Výživa v těhotenství a při kojení', desc: 'Kompletní průvodce výživou podle trimestrů, řešení deficitů, bezpečné doplňky a výživa při kojení.' },
+    ru: { badge: 'Бесплатный гайд', title: 'Питание при беременности и грудном вскармливании', desc: 'Полное руководство по питанию по триместрам, восполнению дефицитов, безопасным добавкам и питанию при ГВ.' },
+    en: { badge: 'Free guide', title: 'Pregnancy & breastfeeding nutrition', desc: 'Complete nutrition guide by trimester, correcting deficiencies, safe supplements and breastfeeding nutrition.' }
   }
 };
 

@@ -11,8 +11,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDF průvodce: Výživa v těhotenství a při kojení — €13 | Sofie Panfilova</title>
-<meta name="description" content="Kompletní průvodce výživou v těhotenství podle trimestrů, kojení a poporodním zotavení. 15 kapitol, tabulky nutrientů, checklisty. €13.">
+<title>Bezplatný PDF průvodce: Výživa v těhotenství a při kojení | Sofie Panfilova</title>
+<meta name="description" content="Bezplatný průvodce: výživa v těhotenství podle trimestrů, kojení a poporodní zotavení. 15 kapitol, tabulky nutrientů, checklisty.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://sofievp.com/cz/guides/pregnancy-nutrition.html">
 <link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/pregnancy-nutrition.html">
@@ -20,30 +20,22 @@
 <link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/pregnancy-nutrition.html">
 <link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/pregnancy-nutrition.html">
 <!-- Open Graph -->
-<meta property="og:type" content="product">
+<meta property="og:type" content="article">
 <meta property="og:url" content="https://sofievp.com/cz/guides/pregnancy-nutrition.html">
-<meta property="og:title" content="PDF průvodce: Výživa v těhotenství a při kojení — €13">
-<meta property="og:description" content="Kompletní průvodce výživou v těhotenství, kojení a poporodním zotavení. 15 kapitol, tabulky nutrientů, checklisty.">
+<meta property="og:title" content="Bezplatný PDF průvodce: Výživa v těhotenství a při kojení">
+<meta property="og:description" content="Kompletní průvodce výživou v těhotenství, kojení a poporodním zotavení. 15 kapitol, tabulky nutrientů, checklisty. Zdarma.">
 <meta property="og:image" content="https://sofievp.com/sofie-photo.jpg">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:site_name" content="Sofie Panfilova — Nutriční terapeutka">
-<meta property="product:price:amount" content="13">
-<meta property="product:price:currency" content="EUR">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "PDF průvodce: Výživa v těhotenství a při kojení",
+  "@type": "Article",
+  "headline": "Bezplatný PDF průvodce: Výživa v těhotenství a při kojení",
   "description": "Kompletní průvodce výživou v těhotenství podle trimestrů, kojení a poporodním zotavení.",
-  "brand": { "@type": "Person", "name": "Sofia Panfilova" },
-  "offers": {
-    "@type": "Offer",
-    "price": "13",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock",
-    "url": "https://sofievp.com/cz/guides/pregnancy-nutrition.html"
-  },
-  "category": "Digital Guide"
+  "author": { "@type": "Person", "name": "Sofia Panfilova" },
+  "publisher": { "@type": "Person", "name": "Sofia Panfilova" },
+  "url": "https://sofievp.com/cz/guides/pregnancy-nutrition.html"
 }
 </script>
 <script type="application/ld+json">
@@ -152,9 +144,9 @@
     <h1>Výživa v těhotenství a při kojení</h1>
     <p class="subtitle">Kompletní průvodce výživou podle trimestrů, doplňování deficitů, bezpečné doplňky, výživa při kojení a poporodní zotavení.</p>
     <div class="price-block">
-      <span class="price">€13</span>
+      <span class="price">Zdarma</span>
     </div>
-    <a class="btn-outline" href="#buy"><span>Koupit průvodce</span></a>
+    <a class="btn-outline" href="#" onclick="openGuideOrPopup(event, 'pregnancy')"><span>Získat průvodce</span></a>
     <div class="format">PDF • 15 kapitol • tabulky • checklisty • šablony</div>
   </div>
 
@@ -244,11 +236,10 @@
 
   <div class="guide-cta-block" id="buy">
     <h2>Získat průvodce</h2>
-    <div class="price">€13</div>
-    <div class="note">PDF soubor • okamžité doručení • přístup navždy</div>
-    <a class="btn-outline" href="https://buy.stripe.com/cNibJ1ecLaNW8vjdM6cV204" target="_blank"><span>Koupit průvodce</span></a>
-    <p style="font-size: 0.82rem; color: var(--steel); margin-top: 16px;">Bezpečná platba kartou, Apple Pay nebo Google Pay přes Stripe</p>
-    <p style="font-size: 0.82rem; color: var(--steel); margin-top: 10px;">Pro platbu ruskou kartou mi napište na <a href="https://t.me/sofievp" target="_blank" style="color: var(--accent); text-decoration: underline;">Telegram</a></p>
+    <div class="price">Zdarma</div>
+    <div class="note">PDF soubor • okamžité doručení na e-mail</div>
+    <a class="btn-outline" href="#" onclick="openGuideOrPopup(event, 'pregnancy')"><span>Získat průvodce</span></a>
+    <p style="font-size: 0.82rem; color: var(--steel); margin-top: 16px;">Zadejte e-mail — pošleme PDF na vaši poštu a hned ho otevřeme ke čtení.</p>
   </div>
 </div>
 
@@ -261,6 +252,29 @@
   <div class="footer-bottom"><p>&copy; 2026 Sofie Panfilova. Všechna práva vyhrazena. · <a href="/cz/privacy-policy.html" style="color:inherit;text-decoration:underline;opacity:0.7">Zásady ochrany soukromí</a></p></div>
 </footer>
 
+<!-- LEAD MAGNET POPUP -->
+<div class="lm-overlay" id="lmOverlay">
+<div class="lm-popup">
+<button class="lm-close" onclick="closeLM()">×</button>
+<div id="lmFormState">
+<div class="lm-badge">Bezplatný průvodce</div>
+<h3>Výživa v těhotenství a při kojení</h3>
+<p>Kompletní průvodce výživou podle trimestrů, řešení deficitů, bezpečné doplňky a výživa při kojení.</p>
+<div class="lm-form" id="lmForm">
+<input id="lmEmail" placeholder="Váš e-mail" required="" type="email"/>
+<button onclick="submitLM()">Získat</button>
+</div>
+</div>
+<div class="lm-success" id="lmSuccess">
+<h3>Hotovo!</h3>
+<p>Průvodce se otevírá v novém okně. Kopie byla také odeslána na váš e-mail.</p>
+<a href="/assets/guides/pregnancy-nutrition-guide.pdf" target="_blank">
+<span>Otevřít průvodce znovu</span>
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+</div>
+</div>
 <script src="/assets/js/main.js"></script>
 </body>
 </html>

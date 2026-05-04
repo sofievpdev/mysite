@@ -11,8 +11,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDF Guide: Pregnancy &amp; Breastfeeding Nutrition — €13 | Sofie Panfilova</title>
-<meta name="description" content="Complete nutrition guide for pregnancy by trimester, breastfeeding, and postpartum recovery. 15 chapters, nutrient tables, checklists. €13.">
+<title>Free PDF Guide: Pregnancy &amp; Breastfeeding Nutrition | Sofie Panfilova</title>
+<meta name="description" content="Free guide: complete nutrition for pregnancy by trimester, breastfeeding, and postpartum recovery. 15 chapters, nutrient tables, checklists.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://sofievp.com/en/guides/pregnancy-nutrition.html">
 <link rel="alternate" hreflang="ru" href="https://sofievp.com/ru/guides/pregnancy-nutrition.html">
@@ -20,30 +20,22 @@
 <link rel="alternate" hreflang="cs" href="https://sofievp.com/cz/guides/pregnancy-nutrition.html">
 <link rel="alternate" hreflang="x-default" href="https://sofievp.com/en/guides/pregnancy-nutrition.html">
 <!-- Open Graph -->
-<meta property="og:type" content="product">
+<meta property="og:type" content="article">
 <meta property="og:url" content="https://sofievp.com/en/guides/pregnancy-nutrition.html">
-<meta property="og:title" content="PDF Guide: Pregnancy & Breastfeeding Nutrition — €13">
-<meta property="og:description" content="Complete nutrition guide for pregnancy, breastfeeding, and postpartum recovery. 15 chapters, nutrient tables, checklists.">
+<meta property="og:title" content="Free PDF Guide: Pregnancy & Breastfeeding Nutrition">
+<meta property="og:description" content="Complete nutrition guide for pregnancy, breastfeeding, and postpartum recovery. 15 chapters, nutrient tables, checklists. Free.">
 <meta property="og:image" content="https://sofievp.com/sofie-photo.jpg">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Sofie Panfilova — Clinical Dietitian">
-<meta property="product:price:amount" content="13">
-<meta property="product:price:currency" content="EUR">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "PDF Guide: Pregnancy & Breastfeeding Nutrition",
+  "@type": "Article",
+  "headline": "Free PDF Guide: Pregnancy & Breastfeeding Nutrition",
   "description": "Complete nutrition guide for pregnancy by trimester, breastfeeding, and postpartum recovery.",
-  "brand": { "@type": "Person", "name": "Sofia Panfilova" },
-  "offers": {
-    "@type": "Offer",
-    "price": "13",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock",
-    "url": "https://sofievp.com/en/guides/pregnancy-nutrition.html"
-  },
-  "category": "Digital Guide"
+  "author": { "@type": "Person", "name": "Sofia Panfilova" },
+  "publisher": { "@type": "Person", "name": "Sofia Panfilova" },
+  "url": "https://sofievp.com/en/guides/pregnancy-nutrition.html"
 }
 </script>
 <script type="application/ld+json">
@@ -152,9 +144,9 @@
     <h1>Pregnancy &amp; Breastfeeding Nutrition Guide</h1>
     <p class="subtitle">Complete guide to nutrition by trimester, addressing deficiencies, safe supplements, breastfeeding nutrition, and postpartum recovery.</p>
     <div class="price-block">
-      <span class="price">€13</span>
+      <span class="price">Free</span>
     </div>
-    <a class="btn-outline" href="#buy"><span>Buy guide</span></a>
+    <a class="btn-outline" href="#" onclick="openGuideOrPopup(event, 'pregnancy')"><span>Get the guide</span></a>
     <div class="format">PDF • 15 chapters • tables • checklists • templates</div>
   </div>
 
@@ -244,11 +236,10 @@
 
   <div class="guide-cta-block" id="buy">
     <h2>Get the guide</h2>
-    <div class="price">€13</div>
-    <div class="note">PDF file • instant delivery • lifetime access</div>
-    <a class="btn-outline" href="https://buy.stripe.com/cNibJ1ecLaNW8vjdM6cV204" target="_blank"><span>Buy now</span></a>
-    <p style="font-size: 0.82rem; color: var(--steel); margin-top: 16px;">Secure payment via card, Apple Pay or Google Pay through Stripe</p>
-    <p style="font-size: 0.82rem; color: var(--steel); margin-top: 10px;">For payment with a Russian bank card, please message me on <a href="https://t.me/sofievp" target="_blank" style="color: var(--accent); text-decoration: underline;">Telegram</a></p>
+    <div class="price">Free</div>
+    <div class="note">PDF file • instant delivery to your email</div>
+    <a class="btn-outline" href="#" onclick="openGuideOrPopup(event, 'pregnancy')"><span>Get the guide</span></a>
+    <p style="font-size: 0.82rem; color: var(--steel); margin-top: 16px;">Leave your email — we'll send the PDF to your inbox and open it for reading right away.</p>
   </div>
 </div>
 
@@ -261,6 +252,29 @@
   <div class="footer-bottom"><p>&copy; 2026 Sofie Panfilova. All rights reserved. · <a href="/en/privacy-policy.html" style="color:inherit;text-decoration:underline;opacity:0.7">Privacy Policy</a></p></div>
 </footer>
 
+<!-- LEAD MAGNET POPUP -->
+<div class="lm-overlay" id="lmOverlay">
+<div class="lm-popup">
+<button class="lm-close" onclick="closeLM()">×</button>
+<div id="lmFormState">
+<div class="lm-badge">Free guide</div>
+<h3>Pregnancy &amp; breastfeeding nutrition</h3>
+<p>Complete nutrition guide by trimester, correcting deficiencies, safe supplements and breastfeeding nutrition.</p>
+<div class="lm-form" id="lmForm">
+<input id="lmEmail" placeholder="Your email" required="" type="email"/>
+<button onclick="submitLM()">Get it</button>
+</div>
+</div>
+<div class="lm-success" id="lmSuccess">
+<h3>Done!</h3>
+<p>The guide is opening in a new tab. A copy has also been sent to your email.</p>
+<a href="/assets/guides/pregnancy-nutrition-guide.pdf" target="_blank">
+<span>Open guide again</span>
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+</div>
+</div>
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
