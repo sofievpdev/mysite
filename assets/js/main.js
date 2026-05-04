@@ -143,7 +143,7 @@ var guideConfig = {
   'pregnancy': {
     cs: { path: '/assets/guides/pregnancy-nutrition-guide.pdf', templateId: 8 },
     ru: { path: '/assets/guides/pregnancy-nutrition-guide.pdf', templateId: 6 },
-    en: { path: '/assets/guides/pregnancy-nutrition-guide.pdf', templateId: 7 }
+    en: { path: '/en/guides/pregnancy-nutrition-guide.html', templateId: 7 }
   }
 };
 var defaultGuideKey = '5-tests';
