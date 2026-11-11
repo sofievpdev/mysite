@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z33VMFB9KE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied'});
+  try { if (localStorage.getItem('cookie_consent') === 'granted') gtag('consent', 'update', {analytics_storage: 'granted'}); } catch (e) {}
   gtag('js', new Date());
   gtag('config', 'G-Z33VMFB9KE');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z33VMFB9KE"></script>
+<script defer src="/assets/js/consent.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy | Sofie Panfilova</title>
@@ -65,7 +68,7 @@
   <div class="service-hero-inner">
     <div>
       <h1>Privacy Policy</h1>
-      <p class="service-hero-sub">Last updated: March 2026</p>
+      <p class="service-hero-sub">Last updated: November 2026</p>
     </div>
   </div>
 </section>
@@ -96,9 +99,9 @@
       <p>We do not sell or share your personal data with third parties for marketing purposes.</p>
 
       <h2>4. Cookies</h2>
-      <p>Our website uses only essential cookies:</p>
+      <p>Our website uses the following cookies:</p>
       <ul>
-        <li><strong>Google Analytics 4</strong> &mdash; analytics cookies for collecting anonymous visitor statistics (cookies: <code>_ga</code>, <code>_ga_*</code>). This data helps us understand which pages are most useful to visitors.</li>
+        <li><strong>Google Analytics 4</strong> &mdash; analytics cookies for collecting anonymous visitor statistics (cookies: <code>_ga</code>, <code>_ga_*</code>). This data helps us understand which pages are most useful to visitors. Analytics cookies are set only after you give consent in the cookie banner; you can change your choice at any time via the &ldquo;Cookie settings&rdquo; link at the bottom of the page.</li>
         <li><strong>Technical cookies</strong> &mdash; necessary for the proper functioning of the website.</li>
       </ul>
       <p>We do not use advertising cookies or cookies that track users across other websites.</p>
@@ -113,7 +116,7 @@
         <li><strong>Google Analytics 4</strong> &mdash; website traffic analytics. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
         <li><strong>Stripe</strong> &mdash; payment processing. <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a>.</li>
         <li><strong>Brevo</strong> &mdash; email delivery. <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">Brevo Privacy Policy</a>.</li>
-        <li><strong>GitHub Pages</strong> &mdash; website hosting. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
+        <li><strong>Render</strong> &mdash; website hosting. <a href="https://render.com/privacy" target="_blank" rel="noopener">Render Privacy Policy</a>.</li>
       </ul>
 
       <h2>7. Your Rights (GDPR)</h2>
