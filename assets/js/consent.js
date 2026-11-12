@@ -8,17 +8,17 @@
   var T = {
     ru: {
       text: 'Мы используем аналитические cookie Google Analytics, чтобы понимать, какие страницы полезны. Они включаются только с вашего согласия.',
-      accept: 'Принять', decline: 'Отклонить', more: 'Подробнее', settings: 'Настройки cookie',
+      accept: 'Принять', decline: 'Отклонить', more: 'Политика конфиденциальности', settings: 'Настройки cookie',
       policy: '/ru/privacy-policy.html'
     },
     en: {
       text: 'We use Google Analytics cookies to understand which pages are useful. They are switched on only with your consent.',
-      accept: 'Accept', decline: 'Decline', more: 'Learn more', settings: 'Cookie settings',
+      accept: 'Accept', decline: 'Decline', more: 'Privacy policy', settings: 'Cookie settings',
       policy: '/en/privacy-policy.html'
     },
     cs: {
       text: 'Používáme analytické cookies Google Analytics, abychom věděli, které stránky jsou užitečné. Zapneme je pouze s vaším souhlasem.',
-      accept: 'Přijmout', decline: 'Odmítnout', more: 'Více informací', settings: 'Nastavení cookies',
+      accept: 'Přijmout', decline: 'Odmítnout', more: 'Zásady ochrany soukromí', settings: 'Nastavení cookies',
       policy: '/cz/privacy-policy.html'
     }
   };
