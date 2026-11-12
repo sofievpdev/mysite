@@ -1,0 +1,78 @@
+services:
+  - type: web
+    name: sofievp
+    runtime: static
+    staticPublishPath: ./
+    buildCommand: ""
+    autoDeploy: true
+    pullRequestPreviewsEnabled: false
+
+    headers:
+      # RFC 8288 Link relations — every HTML response advertises sitemap, llms.txt, hreflang alternates
+      - path: /*
+        name: Link
+        value: '<https://sofievp.com/sitemap.xml>; rel="sitemap"; type="application/xml", <https://sofievp.com/llms.txt>; rel="llms"; type="text/markdown", <https://sofievp.com/robots.txt>; rel="robots"; type="text/plain"'
+
+      # Hreflang alternates per language root
+      - path: /ru/*
+        name: Link
+        value: '<https://sofievp.com/ru/>; rel="alternate"; hreflang="ru", <https://sofievp.com/en/>; rel="alternate"; hreflang="en", <https://sofievp.com/cz/>; rel="alternate"; hreflang="cs", <https://sofievp.com/ru/>; rel="alternate"; hreflang="x-default", <https://sofievp.com/sitemap.xml>; rel="sitemap"; type="application/xml", <https://sofievp.com/llms.ru.txt>; rel="llms"; type="text/markdown"'
+      - path: /en/*
+        name: Link
+        value: '<https://sofievp.com/ru/>; rel="alternate"; hreflang="ru", <https://sofievp.com/en/>; rel="alternate"; hreflang="en", <https://sofievp.com/cz/>; rel="alternate"; hreflang="cs", <https://sofievp.com/ru/>; rel="alternate"; hreflang="x-default", <https://sofievp.com/sitemap.xml>; rel="sitemap"; type="application/xml", <https://sofievp.com/llms.txt>; rel="llms"; type="text/markdown"'
+      - path: /cz/*
+        name: Link
+        value: '<https://sofievp.com/ru/>; rel="alternate"; hreflang="ru", <https://sofievp.com/en/>; rel="alternate"; hreflang="en", <https://sofievp.com/cz/>; rel="alternate"; hreflang="cs", <https://sofievp.com/ru/>; rel="alternate"; hreflang="x-default", <https://sofievp.com/sitemap.xml>; rel="sitemap"; type="application/xml", <https://sofievp.com/llms.cz.txt>; rel="llms"; type="text/markdown"'
+
+      # Security headers on every page
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=63072000; includeSubDomains; preload
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+      - path: /*
+        name: Cross-Origin-Opener-Policy
+        value: same-origin
+      - path: /*
+        name: Content-Security-Policy
+        # Analytics + fonts + consent only; no inline event handlers.
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://sofievp.com https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://sofievp-api.onrender.com https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://sofievp-api.onrender.com"
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+
+      # Vary: Accept for markdown negotiation hint
+      - path: /*
+        name: Vary
+        value: Accept, Accept-Encoding
+
+      # Long cache for immutable assets
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=604800, stale-while-revalidate=86400
+      - path: /*.jpg
+        name: Cache-Control
+        value: public, max-age=604800, stale-while-revalidate=86400
+      - path: /*.png
+        name: Cache-Control
+        value: public, max-age=604800, stale-while-revalidate=86400
+      - path: /*.webp
+        name: Cache-Control
+        value: public, max-age=604800, stale-while-revalidate=86400
+      - path: /*.woff2
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+
+    routes:
+      # Serve /llms.txt counterpart when Accept wants markdown for the page roots
+      # (Render doesn't do Accept routing; Cloudflare Worker handles it — see cloudflare-worker.js)
+      - type: rewrite
+        source: /index.md
+        destination: /llms.txt

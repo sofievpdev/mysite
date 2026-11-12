@@ -1,0 +1,46 @@
+# Sofie Panfilova — клинический диетолог для женщин
+
+> София Панфилова (бренд «Sofie Panfilova / Health as a Project») — клинический диетолог для женщин с опытом работы более 10 лет. Персональные программы питания на основе анализов крови и гормонального профиля: менопауза, ЗГТ, GLP-1, беременность и ГВ, метаболизм, CGM. Лимассол (Кипр) и онлайн по всему миру. Образование: 1-й медицинский факультет Карлова университета (Прага), MBA в управлении здравоохранением (ESBM), сертификация NESTA.
+
+## Услуги
+
+- [Экспресс-диагностика](https://sofievp.com/ru/services/express-diagnostics.html): 30-минутный разбор ситуации или письменный анализ результатов. €97.
+- [Консультация диетолога онлайн](https://sofievp.com/ru/services/nutrition-consultation.html): 1,5 часа + контроль через 2 недели. €250.
+- [Консультация при беременности и ГВ](https://sofievp.com/ru/services/pregnancy-consultation.html): питание по триместрам и при грудном вскармливании. €250.
+- [CGM-мониторинг глюкозы](https://sofievp.com/ru/services/cgm-monitoring.html): 2 недели непрерывного мониторинга с ежедневной поддержкой. €350.
+- [Нутриционное сопровождение, 8 недель](https://sofievp.com/ru/services/nutritional-support.html): программа из 8 еженедельных сессий. €750.
+- [Health as a Project](https://sofievp.com/ru/services/health-as-a-project.html): флагманская 6-месячная программа долголетия. €1500.
+
+## Бесплатные гайды (по email)
+
+- [5 ключевых анализов для женщин](https://sofievp.com/guide-5-analizov.html): пять показателей крови, по которым видно состояние гормонов и метаболизма.
+- [Чек-лист по омега-3](https://sofievp.com/ru/guides/omega3.html): как выбрать работающий омега-3 — форма, дозировка, качество.
+- [Гайд по питанию при беременности и ГВ](https://sofievp.com/ru/guides/pregnancy-nutrition-guide.html): полный гайд по питанию во время беременности и лактации.
+- [Чек-лист по железу](https://sofievp.com/ru/guides/iron.html): как восполнить дефицит железа.
+
+## Блог
+
+- [Кофе при беременности](https://sofievp.com/ru/blog/coffee-pregnancy.html): сколько кофеина безопасно и когда его стоит убрать.
+- [HOMA-IR и инсулинорезистентность](https://sofievp.com/ru/blog/homa-ir-insulin-resistance.html): как читать индекс HOMA-IR и что с ним делать.
+- [Интервью: будущее телемедицины в Чехии](https://sofievp.com/ru/blog/interview-radio-prague.html): интервью для Radio Prague.
+- [Видео о питании и здоровье](https://sofievp.com/ru/blog/video-nutrition-tips.html): подборка видео.
+
+## Контакты
+
+- Telegram (основной канал записи): https://t.me/sofievp
+- Telegram-канал: https://t.me/sofiehealth
+- Calendly: https://calendly.com/sofievp
+- WhatsApp: https://wa.me/420732175477
+- Email: sofia.panfilova@gmail.com
+
+## Языки
+
+- Русский: https://sofievp.com/ru/
+- English: https://sofievp.com/en/ — see [llms.txt](https://sofievp.com/llms.txt)
+- Čeština: https://sofievp.com/cz/ — see [llms.cz.txt](https://sofievp.com/llms.cz.txt)
+
+## Машиночитаемые ресурсы
+
+- Карта сайта (XML): https://sofievp.com/sitemap.xml
+- Правила для роботов: https://sofievp.com/robots.txt
+- Политика конфиденциальности: https://sofievp.com/ru/privacy-policy.html

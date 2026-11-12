@@ -1,0 +1,43 @@
+# Sofie Panfilova — nutriční terapeutka pro ženy
+
+> Sofia Panfilova (značka „Sofie Panfilova / Health as a Project") je nutriční terapeutka pro ženy s více než 10 lety praxe. Osobní výživové programy na základě krevních testů a hormonálního profilu: menopauza, HRT, GLP-1, těhotenství a kojení, metabolismus, CGM. Osobně v Limassolu (Kypr) a online po celém světě. Vzdělání: 1. lékařská fakulta Univerzity Karlovy (Praha), MBA v řízení zdravotnictví (ESBM), certifikace NESTA.
+
+## Služby
+
+- [Expresní diagnostika](https://sofievp.com/cz/services/express-diagnostics.html): 30minutový rozbor nebo písemná analýza výsledků. €97.
+- [Konzultace nutriční terapeutky online](https://sofievp.com/cz/services/nutrition-consultation.html): 1,5 hodiny + follow-up po 2 týdnech. €250.
+- [Konzultace v těhotenství a kojení](https://sofievp.com/cz/services/pregnancy-consultation.html): podpora stravy po trimestrech a při kojení. €250.
+- [CGM monitoring glukózy](https://sofievp.com/cz/services/cgm-monitoring.html): 2týdenní monitoring s každodenní podporou. €350.
+- [Nutriční doprovod, 8 týdnů](https://sofievp.com/cz/services/nutritional-support.html): 8týdenní program s týdenními sezeními. €750.
+- [Health as a Project](https://sofievp.com/cz/services/health-as-a-project.html): vlajkový 6měsíční program pro dlouhověkost. €1500.
+
+## Bezplatní průvodci (e-mailem)
+
+- [5 klíčových krevních testů](https://sofievp.com/cz/guides/5-analyzu.html): pět krevních ukazatelů, podle kterých se nejlépe pozná stav hormonů a metabolismu.
+- [Omega-3 checklist](https://sofievp.com/cz/guides/omega3.html): jak vybrat kvalitní doplněk omega-3 — forma, dávka, kvalita.
+- [Výživa v těhotenství a kojení](https://sofievp.com/cz/guides/pregnancy-nutrition.html): úplný průvodce výživou v těhotenství a laktaci.
+
+## Blog
+
+- [Káva v těhotenství](https://sofievp.com/cz/blog/coffee-pregnancy.html): kolik kofeinu je bezpečné a kdy ho vysadit.
+- [HOMA-IR a inzulinová rezistence](https://sofievp.com/cz/blog/homa-ir-insulin-resistance.html): jak číst index HOMA-IR a co s ním.
+
+## Kontakt
+
+- Telegram (hlavní kanál pro rezervace): https://t.me/sofievp
+- Telegram kanál: https://t.me/sofiehealth
+- Calendly: https://calendly.com/sofievp
+- WhatsApp: https://wa.me/420732175477
+- E-mail: sofia.panfilova@gmail.com
+
+## Jazyky
+
+- Čeština: https://sofievp.com/cz/
+- English: https://sofievp.com/en/ — see [llms.txt](https://sofievp.com/llms.txt)
+- Русский: https://sofievp.com/ru/ — see [llms.ru.txt](https://sofievp.com/llms.ru.txt)
+
+## Strojově čitelné zdroje
+
+- Sitemap (XML): https://sofievp.com/sitemap.xml
+- Robots policy: https://sofievp.com/robots.txt
+- Zásady ochrany soukromí: https://sofievp.com/cz/privacy-policy.html

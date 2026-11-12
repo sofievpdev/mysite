@@ -1,0 +1,43 @@
+# Sofie Panfilova — Clinical Dietitian for Women
+
+> Sofia Panfilova (brand "Sofie Panfilova / Health as a Project") is a clinical dietitian for women with 10+ years of experience. Personalised nutrition programmes based on blood tests and hormonal profile: menopause, HRT, GLP-1, pregnancy & breastfeeding, metabolism, CGM. In-person in Limassol (Cyprus) and online worldwide. Education: 1. Lékařská fakulta, Univerzita Karlova (Prague); MBA in healthcare management (ESBM); NESTA certification.
+
+## Services
+
+- [Express diagnostics (EN)](https://sofievp.com/en/services/express-diagnostics.html): 30-min nutrition triage or written review of lab results. €97.
+- [Nutrition consultation (EN)](https://sofievp.com/en/services/nutrition-consultation.html): 1.5-hour online consultation with a 2-week follow-up. €250.
+- [Pregnancy & breastfeeding consultation (EN)](https://sofievp.com/en/services/pregnancy-consultation.html): nutrition support per trimester and during lactation. €250.
+- [CGM glucose monitoring (EN)](https://sofievp.com/en/services/cgm-monitoring.html): 2-week continuous glucose monitoring with daily support. €350.
+- [Nutritional support, 8 weeks (EN)](https://sofievp.com/en/services/nutritional-support.html): 8-week programme with weekly sessions. €750.
+- [Health as a Project (EN)](https://sofievp.com/en/services/health-as-a-project.html): flagship 6-month longevity programme. €1500.
+
+## Free guides (email-gated)
+
+- [5 key blood tests for women (EN)](https://sofievp.com/en/guides/5-tests.html): the five blood markers that reveal the most about hormonal and metabolic health.
+- [Omega-3 checklist (EN)](https://sofievp.com/en/guides/omega3.html): how to pick an effective omega-3 supplement — form, dose, quality.
+- [Pregnancy & breastfeeding nutrition guide (EN)](https://sofievp.com/en/guides/pregnancy-nutrition-guide.html): full nutrition guide for pregnancy and lactation.
+
+## Blog
+
+- [Coffee during pregnancy (EN)](https://sofievp.com/en/blog/coffee-pregnancy.html): how much caffeine is safe, and when to cut it.
+- [HOMA-IR and insulin resistance (EN)](https://sofievp.com/en/blog/homa-ir-insulin-resistance.html): how to read the HOMA-IR index and what to do about it.
+
+## Contact
+
+- Telegram (primary booking): https://t.me/sofievp
+- Telegram channel: https://t.me/sofiehealth
+- Calendly (booking): https://calendly.com/sofievp
+- WhatsApp: https://wa.me/420732175477
+- Email: sofia.panfilova@gmail.com
+
+## Languages
+
+- English: https://sofievp.com/en/
+- Russian (основной): https://sofievp.com/ru/ — see [llms.ru.txt](https://sofievp.com/llms.ru.txt)
+- Czech: https://sofievp.com/cz/ — see [llms.cz.txt](https://sofievp.com/llms.cz.txt)
+
+## Machine-readable resources
+
+- Sitemap (XML): https://sofievp.com/sitemap.xml
+- Robots policy: https://sofievp.com/robots.txt
+- Privacy policy (EN): https://sofievp.com/en/privacy-policy.html
