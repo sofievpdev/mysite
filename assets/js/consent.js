@@ -55,7 +55,7 @@
     b.type = 'button';
     b.textContent = label;
     b.style.cssText = 'font:600 14px Inter,-apple-system,sans-serif;padding:10px 20px;border-radius:999px;cursor:pointer;' +
-      (primary ? 'background:#2E7F94;color:#FAFAF8;border:1px solid #2E7F94;' : 'background:transparent;color:#2C3E46;border:1px solid #4E5E66;');
+      (primary ? 'background:#1E6679;color:#FAFAF8;border:1px solid #1E6679;' : 'background:transparent;color:#2C3E46;border:1px solid #4E5E66;');
     b.addEventListener('click', handler);
     return b;
   }
@@ -74,7 +74,7 @@
     var a = document.createElement('a');
     a.href = t.policy;
     a.textContent = t.more;
-    a.style.cssText = 'color:#2E7F94;text-decoration:underline;';
+    a.style.cssText = 'color:#1E6679;text-decoration:underline;';
     p.appendChild(a);
     var box = document.createElement('div');
     box.style.cssText = 'display:flex;gap:10px;flex-wrap:wrap;';
@@ -91,7 +91,7 @@
     a.href = '#';
     a.setAttribute('data-cookie-settings', '');
     a.textContent = t.settings;
-    a.style.cssText = 'color:inherit;text-decoration:underline;opacity:0.7';
+    a.style.cssText = 'color:inherit;text-decoration:underline';
     a.addEventListener('click', function (e) { e.preventDefault(); show(); });
     footer.appendChild(document.createTextNode(' · '));
     footer.appendChild(a);
