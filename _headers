@@ -1,0 +1,43 @@
+/*
+  Link: <https://sofievp.com/sitemap.xml>; rel="sitemap"; type="application/xml", <https://sofievp.com/llms.txt>; rel="llms"; type="text/markdown", <https://sofievp.com/robots.txt>; rel="robots"; type="text/plain"
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://sofievp.com https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://sofievp-api.onrender.com https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://sofievp-api.onrender.com
+  Vary: Accept, Accept-Encoding
+
+/ru/*
+  Link: <https://sofievp.com/sitemap.xml>; rel="sitemap"; type="application/xml", <https://sofievp.com/llms.ru.txt>; rel="llms"; type="text/markdown", <https://sofievp.com/robots.txt>; rel="robots"; type="text/plain", <https://sofievp.com/ru/>; rel="alternate"; hreflang="ru", <https://sofievp.com/en/>; rel="alternate"; hreflang="en", <https://sofievp.com/cz/>; rel="alternate"; hreflang="cs", <https://sofievp.com/ru/>; rel="alternate"; hreflang="x-default"
+
+/en/*
+  Link: <https://sofievp.com/sitemap.xml>; rel="sitemap"; type="application/xml", <https://sofievp.com/llms.txt>; rel="llms"; type="text/markdown", <https://sofievp.com/robots.txt>; rel="robots"; type="text/plain", <https://sofievp.com/ru/>; rel="alternate"; hreflang="ru", <https://sofievp.com/en/>; rel="alternate"; hreflang="en", <https://sofievp.com/cz/>; rel="alternate"; hreflang="cs", <https://sofievp.com/ru/>; rel="alternate"; hreflang="x-default"
+
+/cz/*
+  Link: <https://sofievp.com/sitemap.xml>; rel="sitemap"; type="application/xml", <https://sofievp.com/llms.cz.txt>; rel="llms"; type="text/markdown", <https://sofievp.com/robots.txt>; rel="robots"; type="text/plain", <https://sofievp.com/ru/>; rel="alternate"; hreflang="ru", <https://sofievp.com/en/>; rel="alternate"; hreflang="en", <https://sofievp.com/cz/>; rel="alternate"; hreflang="cs", <https://sofievp.com/ru/>; rel="alternate"; hreflang="x-default"
+
+/assets/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.png
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.jpg
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.webp
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/llms.ru.txt
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/llms.cz.txt
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
