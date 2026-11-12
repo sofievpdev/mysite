@@ -104,6 +104,7 @@
 <meta name="twitter:title" content="Экспресс‑диагностика питания — €97 | Sofie Panfilova">
 <meta name="twitter:description" content="30‑минутный разбор ситуации или письменный анализ результатов с персональными рекомендациями. €97.">
 <meta name="twitter:image" content="https://sofievp.com/sofie-photo.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="/favicon.png">
 </head>
 <body>
 
@@ -118,9 +119,9 @@
       <li><a href="/ru/#contact">Контакт</a></li>
     </ul>
     <div class="lang-switch">
-      <a class="lang-btn active" href="/ru/services/express-diagnostics.html">RU</a>
-      <a class="lang-btn" href="/en/services/express-diagnostics.html">EN</a>
-      <a class="lang-btn" href="/cz/services/express-diagnostics.html">CZ</a>
+      <a class="lang-btn active" href="/ru/services/express-diagnostics.html" aria-label="Подробнее о Экспресс-диагностике питания">RU</a>
+      <a class="lang-btn" href="/en/services/express-diagnostics.html" aria-label="Подробнее о Экспресс-диагностике питания">EN</a>
+      <a class="lang-btn" href="/cz/services/express-diagnostics.html" aria-label="Подробнее о Экспресс-диагностике питания">CZ</a>
     </div>
     <button class="burger" onclick="toggleMenu()">&#9776;</button>
   </div>
@@ -210,21 +211,21 @@
     <h2>Частые вопросы</h2>
     <div class="service-faq-item">
       <div class="service-faq-question" onclick="this.parentElement.classList.toggle('open')">
-        <h4>Как подготовиться к экспресс-диагностике?</h4>
+        <h3 class="faq-h">Как подготовиться к экспресс-диагностике?</h3>
         <div class="service-faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></div>
       </div>
       <div class="service-faq-answer"><div class="service-faq-answer-inner">Заполните анкету и приложите свежие анализы (если есть). Для видеозвонка &mdash; подготовьте вопросы. Для письменного формата &mdash; подробно опишите симптомы и цели.</div></div>
     </div>
     <div class="service-faq-item">
       <div class="service-faq-question" onclick="this.parentElement.classList.toggle('open')">
-        <h4>Чем экспресс-диагностика отличается от полной консультации?</h4>
+        <h3 class="faq-h">Чем экспресс-диагностика отличается от полной консультации?</h3>
         <div class="service-faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></div>
       </div>
       <div class="service-faq-answer"><div class="service-faq-answer-inner">Экспресс-диагностика &mdash; это быстрый старт: за 30 минут вы получите направление и первые шаги. Полная консультация (1,5 часа) включает глубокий анамнез, стратегию питания и follow-up.</div></div>
     </div>
     <div class="service-faq-item">
       <div class="service-faq-question" onclick="this.parentElement.classList.toggle('open')">
-        <h4>Получу ли я план питания?</h4>
+        <h3 class="faq-h">Получу ли я план питания?</h3>
         <div class="service-faq-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></div>
       </div>
       <div class="service-faq-answer"><div class="service-faq-answer-inner">Вы получите персональные рекомендации и список анализов. Детальный план питания входит в услуги &laquo;Консультация диетолога&raquo; или &laquo;Нутриционное сопровождение&raquo;.</div></div>
@@ -243,8 +244,8 @@
 <footer class="service-footer">
   <div class="footer-inner">
     <div class="footer-col"><span class="footer-logo">Sofie Panfilova</span><p>Клинический диетолог для женщин</p></div>
-    <div class="footer-col"><h4>Контакт</h4><p>Email: sofia.panfilova@gmail.com</p><p>Telegram: <a href="https://t.me/sofievp">@sofievp</a></p></div>
-    <div class="footer-col"><h4>Навигация</h4><a href="/ru/">Главная</a><a href="/ru/#services">Услуги</a><a href="/ru/results.html">Результаты</a></div>
+    <div class="footer-col"><h3 class="footer-h">Контакт</h3><p>Email: sofia.panfilova@gmail.com</p><p>Telegram: <a href="https://t.me/sofievp">@sofievp</a></p></div>
+    <div class="footer-col"><h3 class="footer-h">Навигация</h3><a href="/ru/">Главная</a><a href="/ru/#services">Услуги</a><a href="/ru/results.html">Результаты</a></div>
   </div>
   <div class="footer-bottom"><p>&copy; 2025 Sofie Panfilova. All rights reserved.</p></div>
 </footer>

@@ -5,8 +5,8 @@
 --pearl: #E0D6C7;
 --smoke-blue: #3A6E82;
 --smoke-blue-light: #4E8FA3;
---accent: #2E7F94;
---accent-glow: rgba(46, 127, 148, 0.25);
+--accent: #1E6679;
+--accent-glow: rgba(30, 102, 121, 0.25);
 --warm-gold: #B8943A;
 --white: #FAFAF8;
 --dark: #141E24;
@@ -1572,3 +1572,9 @@ transition: all 0.3s;
 .lm-popup { padding: 32px 24px; }
 .lm-form { flex-direction: column; }
 }
+
+/* heading-order fixes for a11y (semantic bump, keep visual style) */
+.symptom-card .symptom-h { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; font-weight: 500; color: var(--dark); margin-bottom: 10px; }
+.service-col .service-col-h { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 14px; }
+.faq-item .faq-question .faq-h { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 500; color: var(--dark); margin: 0; display: inline; }
+.footer-col .footer-h { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dark); margin-bottom: 14px; }
