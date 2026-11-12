@@ -46,9 +46,9 @@
 
 
 
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+
+
+
 <link href="/assets/css/main.css" rel="stylesheet"/>
 <!-- Structured Data: Person (Dietitian) -->
 <script type="application/ld+json">
@@ -314,7 +314,7 @@
 }
 </script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="/favicon.png">
-<!-- build-marker:20261112-22 --></head>
+<!-- build-marker:20261112-22 --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"></noscript></head>
 <body>
 <!-- NAVIGATION -->
 <nav id="navbar">
@@ -336,7 +336,7 @@ Sofie Panfilova
 <a class="lang-btn active" href="/en/">EN</a>
 <a class="lang-btn" href="/cz/">CZ</a>
 </div>
-<button class="burger" onclick="toggleMenu()">
+<button class="burger" onclick="toggleMenu()" type="button" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
 <span></span><span></span><span></span>
 </button>
 </div>
@@ -344,7 +344,7 @@ Sofie Panfilova
 </nav>
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-<button class="mobile-close" onclick="toggleMenu()">×</button>
+<button class="mobile-close" onclick="toggleMenu()" type="button" aria-label="Close navigation menu">×</button>
 <a href="#about" onclick="toggleMenu()">About</a>
 <a href="#services" onclick="toggleMenu()">Services</a>
 <a href="#products" onclick="toggleMenu()">Products</a>
@@ -1035,7 +1035,7 @@ Why monitor glucose?
 <!-- LEAD MAGNET POPUP -->
 <div class="lm-overlay" id="lmOverlay">
 <div class="lm-popup">
-<button class="lm-close" onclick="closeLM()">×</button>
+<button class="lm-close" onclick="closeLM()" type="button" aria-label="Close popup">×</button>
 <div id="lmFormState">
 <div class="lm-badge">Free guide</div>
 <h3>Fatigue &amp; weight after 30: 5 tests that reveal the cause</h3>
